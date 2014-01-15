@@ -23,7 +23,7 @@
   * `bool`        1 byte, 0为否，1为是, 比如是否锁定， 1表示锁定，0表示不锁定
   * `int`         4 bytes
   * `bytes`       n bytes
-  * `string`      4 bytes长度字段 + string的实际数据
+  * `string`      4 bytes长度字段 + string的实际数据, string数据以utf8进行编码
   * `device_id`   16 bytes 设备ID, byte 0设备的类型信息, byte 1-2为vendor编号，3-4为vendor设备型号编号, 剩下的为设备
                   实际ID
   * `time_BCD`    时间的BCD表示2014-02-11 00:23:12 需要用7个bytes表示，byte 1 0x20, byte 2 0x14
