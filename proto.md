@@ -83,10 +83,14 @@
 ## 失败返回payload
 所有失败返回的格式都为
 <table>
-  <tr><th>错误码</th></tr>
-  <tr><td>int</td></tr>
-  <tr><th>错误对象</th></tr>
-  <tr><td>int</td></tr>
+  <tr>
+    <th>错误码</th>
+    <th>错误对象</th>
+  </tr>
+  <tr>
+    <td>short</td>
+    <td>short</td>
+  </tr>
 </table>
 
 可能的错误码有
