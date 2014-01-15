@@ -268,13 +268,29 @@ SEND ALL KINDS OF MSG
   <table>
     <tr>
       <th>控制命令</th>
-      <th>长度</th>
-      <th>红外信号</th>
+      <th>是否是红外标识符</th>
+      <th>红外指令信息</th>
     </tr>
     <tr>
       <td>short</td>
-      <td>int</td>
+      <td>bool</td>
       <td>bytes</td>
+    </tr>
+  </table>
+如果`是否红外标识符`为1, 则`红外指令信息`格式为
+  <table>
+    <tr><th>红外标识符</th></tr>
+    <tr><th>int</th></tr>
+  </table>
+如果`是否红外标识符`为0, 则`红外指令信息`格式为
+  <table>
+    <tr>
+      <th>红外信号长度</th>
+      <th>红外信号</th>
+    </tr>
+    <tr>
+      <th>int</th>
+      <th>bytes</th>
     </tr>
   </table>
 
