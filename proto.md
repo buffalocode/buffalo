@@ -30,8 +30,8 @@
   第一个byte的含义如下表
   <table>
   <tr>
-    <th>0</th>
-    <th>1-6</th>
+    <th>bit 0</th>
+    <th>bit 1-6</th>
   </tr>
   <tr>
     <td>主/从, 0为主, 1为从</td>
