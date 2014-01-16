@@ -26,10 +26,6 @@
   * `string`      4 bytes长度字段 + string的实际数据, string数据以utf8进行编码
   * `device_id`   16 bytes 设备ID, byte 0设备的类型信息, byte 1-2为vendor编号，3-4为vendor设备型号编号, 剩下的为设备
                   实际ID
-  * `time_BCD`    时间的BCD表示2014-02-11 00:23:12 需要用7个bytes表示，byte 1 0x20, byte 2 0x14
-                  byte 3 0x02, byte 4 0x11, byte 5 0x00, byte 6 0x23, byte 7 0x12
-  * `ip`          四个字节，比如202.112.12.13 则表示为 0xCA 0x70 0x0c 0x0d ipv4
-  * `none`        表示该字段不出现， 比如int/none, 表示该字段可能是int, 也可能不出现
 
   第一个byte的含义如下表
   <table>
@@ -42,6 +38,10 @@
     <td>设备子类型(红外[1]、恒温器[2]、空气净化器[3]、墙壁开关[4]、热水器[5]、监控[6]、排插[7]、门禁视频[8])</td>
   </tr>
   </table>
+  * `time_BCD`    时间的BCD表示2014-02-11 00:23:12 需要用7个bytes表示，byte 1 0x20, byte 2 0x14
+                  byte 3 0x02, byte 4 0x11, byte 5 0x00, byte 6 0x23, byte 7 0x12
+  * `ip`          四个字节，比如202.112.12.13 则表示为 0xCA 0x70 0x0c 0x0d ipv4
+  * `none`        表示该字段不出现， 比如int/none, 表示该字段可能是int, 也可能不出现
   * `remote_contoller_type` short 如果是0,则是自定义遥控器,否则为特定型号的遥控器
                             各种特定型号遥控器定义为: 1表示电视机、2表示机顶盒、3表示DVD、4表示空调、5表示IPTV
   * `bit X` 从左往右来规定是哪个bit, bit X表示从左往右第X位, X从0开始
