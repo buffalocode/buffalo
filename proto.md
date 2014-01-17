@@ -184,7 +184,7 @@ SEND ALL KINDS OF MSG
 </table>
 
 #### 返回payload为
-返回格式见下面设备的返回(0xa4)
+返回格式见下面设备的返回(0xa6)
 
 ### 控制设备(0x84)
 #### 请求payload为
