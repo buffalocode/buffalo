@@ -698,7 +698,9 @@ SEND ALL KINDS OF MSG
 空
 
 ### 设备状态汇报(0xa2)
-设备可以隔段时间给服务器发送当前设备的状态, 以便服务器可以更新其缓存
+* 设备可以隔段时间给服务器发送当前设备的状态, 以便服务器可以更新其缓存
+* 服务器对这个命令不做任何返回
+
 #### 请求payload为
 <table>
   <tr>
@@ -710,7 +712,6 @@ SEND ALL KINDS OF MSG
     <td>bytes</td>
   </tr>
 </table>
-服务器对这个命令不做任何返回
 
 `状态`: bytes, 以key value的形式给出，具体key value的形式见0xa6的描述
 
