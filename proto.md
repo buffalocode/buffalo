@@ -62,7 +62,7 @@
   </tr>
   <tr>
     <td>byte</td>
-    <th>uint<th>
+    <td>uint<td>
     <td>int</td>
     <td>bytes</td>
   </tr>
@@ -78,7 +78,7 @@
   </tr>
   <tr>
     <td>byte</td>
-    <th>uint<th>
+    <td>uint<td>
     <td>bool</td>
     <td>int</td>
     <td>bytes</td>
