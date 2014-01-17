@@ -710,18 +710,7 @@ SEND ALL KINDS OF MSG
   </tr>
 </table>
 
-`状态`: bytes, 每种设备汇报的格式都不同
-当前红外项目的`状态`具体定义为
-<table>
-  <tr>
-    <th>温度</th>
-    <th>保留字段</th>
-  </tr>
-  <tr>
-    <td>short</td>
-    <th>4 bytes</td>
-  </tr>
-</table>
+`状态`: bytes, 以key value的形式给出，具体key value的形式见0xa6的描述
 
 ### 控制返回(0xa5)
 
