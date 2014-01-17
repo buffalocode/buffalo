@@ -311,6 +311,15 @@ SEND ALL KINDS OF MSG
   </table>
 
 #### 返回payload为
+
+1. 锁定设备返回
+
+   空
+
+2. 组合控制命令返回
+
+   空
+
 3. 学习按键的返回
 
   <table>
@@ -324,7 +333,9 @@ SEND ALL KINDS OF MSG
     </tr>
   </table>
   
-4. 空
+4. 发送红外指令返回
+
+   空
 
 ### 关联设备(0x8c)
 #### 请求payload为
