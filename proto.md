@@ -22,6 +22,7 @@
   * `short`       2 bytes
   * `bool`        1 byte, 0为否，1为是, 比如是否锁定， 1表示锁定，0表示不锁定
   * `int`         4 bytes
+  * `uint`        4 bytes
   * `bytes`       n bytes
   * `string`      4 bytes长度字段 + string的实际数据, string数据以utf8进行编码
   * `device_id`   16 bytes 设备ID, byte 0设备的类型信息, byte 1-2为vendor编号，3-4为vendor设备型号编号, 剩下的为设备
@@ -55,11 +56,13 @@
 <table>
   <tr>
     <th>类型</th>
+    <th>Msg ID<th>
     <th>长度</th>
     <th>请求payload</th>
   </tr>
   <tr>
     <td>byte</td>
+    <th>uint<th>
     <td>int</td>
     <td>bytes</td>
   </tr>
@@ -68,12 +71,14 @@
 <table>
   <tr>
     <th>类型</th>
+    <th>Msg ID<th>
     <th>是否成功</th>
     <th>长度</th>
     <th>返回payload</th>
   </tr>
   <tr>
     <td>byte</td>
+    <th>uint<th>
     <td>bool</td>
     <td>int</td>
     <td>bytes</td>
