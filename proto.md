@@ -282,11 +282,13 @@ SEND ALL KINDS OF MSG
   <table>
     <tr>
       <th>控制命令</th>
+      <th>长度</th>
       <th>是否是红外标识符</th>
       <th>红外指令信息</th>
     </tr>
     <tr>
       <td>short</td>
+      <td>int</td>
       <td>bool</td>
       <td>bytes</td>
     </tr>
