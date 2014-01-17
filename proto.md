@@ -710,6 +710,7 @@ SEND ALL KINDS OF MSG
     <td>bytes</td>
   </tr>
 </table>
+服务器对这个命令不做任何返回
 
 `状态`: bytes, 以key value的形式给出，具体key value的形式见0xa6的描述
 
