@@ -707,7 +707,7 @@ SEND ALL KINDS OF MSG
   </tr>
   <tr>
     <td>device_id</td>
-    <th>bytes</td>
+    <td>bytes</td>
   </tr>
 </table>
 
