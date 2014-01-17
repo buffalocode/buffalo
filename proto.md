@@ -67,6 +67,9 @@
     <td>bytes</td>
   </tr>
 </table>
+
+* `Msg ID`: 请求里面的Msg ID, 保证在一定时间内不重复， 可以每发一个msg, Msg ID +1
+
 所有返回格式都为
 <table>
   <tr>
@@ -84,6 +87,8 @@
     <td>bytes</td>
   </tr>
 </table>
+
+* `Msg ID`: 和请求里面的Msg ID一致
 
 ## 失败返回payload
 所有失败返回的格式都为
