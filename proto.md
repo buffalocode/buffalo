@@ -98,8 +98,8 @@
     <th>错误对象</th>
   </tr>
   <tr>
-    <td>short</td>
-    <td>short</td>
+    <td>byte</td>
+    <td>byte</td>
   </tr>
 </table>
 
