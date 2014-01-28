@@ -396,7 +396,7 @@ SEND ALL KINDS OF MSG
 #### 返回payload为
 空
 
-## 修改密码(0x91)
+### 修改密码(0x91)
 #### 请求payload为
 <table>
   <tr>
@@ -414,7 +414,7 @@ SEND ALL KINDS OF MSG
 #### 返回payload为
 空
 
-## 找回密码(0x91)
+### 找回密码(0x8e)
 #### 请求payload为
 <table>
   <tr>
@@ -428,7 +428,7 @@ SEND ALL KINDS OF MSG
 #### 返回payload为
 空
 
-## 用户登录(0x92)
+### 用户登录(0x92)
 #### 请求payload为
 <table>
   <tr>
