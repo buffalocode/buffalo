@@ -4,6 +4,7 @@ HTTP API For Buffalo
 获取服务器列表
 ---------------
 获取可以使用的API Server列表, API使用者可以往任何一个server上发送请求, 以做到负载均衡
+
   URL: `[GET] http://{api-host}[:port]/buffalo/list/server`
   
   response:
@@ -43,9 +44,10 @@ HTTP API For Buffalo
     用general_error表示, 类型是string. 以下所有API都按这种格式返回错误
     
     可能的错误有
-    name: 已经被占用
-    email: 已经被占用
-    password: 强度不够
+    
+      * name: 已经被占用
+      * email: 已经被占用
+      * password: 强度不够
     
 获取登录用验证图片
 -----------
@@ -87,11 +89,11 @@ HTTP API For Buffalo
   * error
     
     可能的错误有
-    user: 登录名错误
-    password: 密码错误
-    auth_token: 不正确
-    
-    general_error: 需要auth_token
+
+      * user: 登录名错误
+      * password: 密码错误
+      * auth_token: 不正确
+      * general_error: 需要auth_token
     
 修改密码
 ------------
@@ -116,9 +118,10 @@ HTTP API For Buffalo
   * error
     
     可能的错误有
-    user: 未找到
-    old_password: 不正确
-    new_password: 强度不够
+
+      * user: 未找到
+      * old_password: 不正确
+      * new_password: 强度不够
 
 找回密码
 ---------------
@@ -141,7 +144,8 @@ HTTP API For Buffalo
   * error
     
     可能的错误有
-    email: 不存在
+        
+      * email: 不存在
 
 用户登出
 ---------------
@@ -164,7 +168,8 @@ HTTP API For Buffalo
   * error
     
     可能的错误有
-    general_error: 重复登出
+    
+      * general_error: 重复登出
     
 
 上传手机配置
@@ -237,7 +242,8 @@ HTTP API For Buffalo
   * error
     
     可能的错误有
-    auth_id: 未找到对应的auth_id
+    
+      * auth_id: 未找到对应的auth_id
     
 下载手机配置
 ---------------
@@ -281,7 +287,8 @@ HTTP API For Buffalo
   * error
   
     可能的错误有
-    auth_id: 未找到对应的auth_id
+    
+      * auth_id: 未找到对应的auth_id
     
 关联设备
 ---------------
@@ -307,9 +314,10 @@ HTTP API For Buffalo
   * error
   
     可能的错误有
-    auth_id: 未找到对应的auth_id
-    device_id: 已经关联
-    master_device_id: 缺少master_device_id
+    
+      * auth_id: 未找到对应的auth_id
+      * device_id: 已经关联
+      * master_device_id: 缺少master_device_id
     
 解除关联设备
 ---------------
@@ -333,8 +341,9 @@ HTTP API For Buffalo
   * error
   
     可能的错误有
-    auth_id: 未找到对应的auth_id
-    device_id: 设备没有关联
+    
+      * auth_id: 未找到对应的auth_id
+      * device_id: 设备没有关联
     
 控制设备
 ---------------
@@ -366,5 +375,6 @@ HTTP API For Buffalo
   * error
   
     可能的错误有
-    auth_id: 未找到对应的auth_id
-    device_id: 设备没有关联
+    
+      * auth_id: 未找到对应的auth_id
+      * device_id: 设备没有关联
