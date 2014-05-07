@@ -1,6 +1,20 @@
 HTTP API For Buffalo
 ========================
 
+获取服务器列表
+---------------
+获取可以使用的API Server列表, API使用者可以往任何一个server上发送请求, 以做到负载均衡
+  URL: `[GET] http://{api-host}[:port]/buffalo/list/server`
+  
+  response:
+  
+  * success
+    
+    `{"result": "ok", "cn": ['204.22.12.22:8081', 'www.sxit.com']}`
+  
+  * error
+  
+
 注册用户
 -----------
   URL: `[POST] http://{api-host}[:port]/buffalo/register/user`
