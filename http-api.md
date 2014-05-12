@@ -57,7 +57,7 @@ HTTP API For Buffalo
   
   * success
     
-    `{"result": "ok", "auth_pic_url": "url of auth picture"}`
+    `{"result": "ok", "auth_pic_url": "url of auth picture", "auth_pic_id": "random id"}`
   
   * error
     
@@ -75,6 +75,7 @@ HTTP API For Buffalo
 
       "password": "sample-password",
       "keep_time": 2, keep_time指返回个auth_id的有效时间是多少, -1是仅有效一次， 0为永久有效， 其它正数为有效xxx小时
+      "auth_pic_id": "", 获取登录用验证图片时获得
       "auth_token": "token of auth" 连续登录失败2次会需要输入auth_token
     }
   
@@ -204,7 +205,7 @@ HTTP API For Buffalo
                 {
                     'id': int,
                     'signal_id': int,
-                    'signal_content': base64编码的二进制数据
+                    'signal_content': 二进制数据(每个字节按2个字符编码，比如0xf3写做字符串'f3')
                 }
                 ],
                 'extend_keys': [ 非自定义遥控器的扩展键的定义
@@ -212,7 +213,7 @@ HTTP API For Buffalo
                     'id': int,
                     'name': string,
                     'signal_id': int,
-                    'signal_content': base64编码的二进制数据
+                    'signal_content': 二进制数据(每个字节按2个字符编码，比如0xf3写做字符串'f3')
                 },
                 ]
                 'custom_keys': [ 自定义类型遥控器的信息
@@ -223,7 +224,7 @@ HTTP API For Buffalo
                     'y2middle': int, 离屏幕中心点的y坐标
                     'type': int, 键类型
                     'signal_id': int, 信号id
-                    'signal_content': base64编码的二进制数据
+                    'signal_content': 二进制数据(每个字节按2个字符编码，比如0xf3写做字符串'f3')
                 }
                 ]
             ], 当meta满足某种条件时拥有
@@ -261,7 +262,7 @@ HTTP API For Buffalo
   
   * success
     
-    `{"result": "ok", [和上传的格式一模一样]}`
+    `{"result": "ok", "setting": [和上传的格式一模一样]}`
   
   * error
 
@@ -360,7 +361,7 @@ HTTP API For Buffalo
       'is_locked': 0/1, 当cmd为lock时需要有
       'is_ir_id': 0/1, 是否为红外标识符， 当'send_ir'时需要有
       'ir_id': int, 当is_ir_id为1时有
-      'ir_signal': base64编码的二进制数据, 当is_ir_id为0时有
+      'ir_signal': 二进制数据(每个字节按2个字符编码，比如0xf3写做字符串'f3'), 当is_ir_id为0时有
       'multi_cmds': [
         里面包含了单个control命令
       ]
