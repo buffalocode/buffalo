@@ -20,7 +20,7 @@ HTTP API For Buffalo
 -----------
   URL: `[POST] http://{api-host}[:port]/buffalo/register/user`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -66,7 +66,7 @@ HTTP API For Buffalo
 -----------
   URL: `[POST] http://{api-host}[:port]/buffalo/login/user`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -100,7 +100,7 @@ HTTP API For Buffalo
 ------------
   URL: `[POST] http://{api-host}[:port]/buffalo/change/password`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -128,7 +128,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/forgot/password`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -152,7 +152,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/logout/user`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -177,7 +177,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/upload/setting`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -250,7 +250,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/download/setting`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -270,7 +270,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/status/device`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -295,7 +295,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/asso/device`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -324,7 +324,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/de_asso/device`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
@@ -350,7 +350,7 @@ HTTP API For Buffalo
 ---------------
   URL: `[POST] http://{api-host}[:port]/buffalo/control/device`
   
-  post body type: text/json
+  post body type: application/json
   
   post body:
   
