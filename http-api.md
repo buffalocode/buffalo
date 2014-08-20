@@ -181,7 +181,7 @@ HTTP API For Buffalo
   
   post body:
   
-    [{
+    {
       "auth_id": "get from login",
       "name": "", 配置名称
       "shake": 0/1, 震动
@@ -232,7 +232,7 @@ HTTP API For Buffalo
         ]
       }
       ],
-    }]
+    }
   
   response:
   
