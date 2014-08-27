@@ -147,6 +147,7 @@ POST https://$ip:$port/user/add
         <catelog>所属分类</catelog>
         <certification>荣誉证书base64编码</certification>
         <license>营业执照base64编码</license>
+        <ass_user>关联上级的用户名</ass_user>
     </user>
 </request>
 
@@ -426,6 +427,7 @@ POST https://$ip:$port/user/edit
         <catelog>所属分类</catelog>
         <bank_card_id>银行卡卡号</bank_card_id>
         <bank>开户银行</bank>
+        <bank_user>银行卡所有人</bank_user>
         <certification>荣誉证书base64编码</certification>
         <license>营业执照base64编码</license>
         <card_num>会员卡卡号</card_num>
@@ -501,6 +503,7 @@ POST https://$ip:$port/list/kinds
         <license_url>营业执照url</license_url>
         <bank_card_id>银行卡卡号</bank_card_id>
         <bank>开户银行</bank>
+        <bank_user>银行卡所有人</bank_user>
         <card_num>会员卡卡号</card_num>
         <gender>性别</gender>
         <qq>qq号码</qq>
@@ -570,6 +573,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <license_url>营业执照url</license_url>
         <bank_card_id>银行卡卡号</bank_card_id>
         <bank>开户银行</bank>
+        <bank_user>银行卡所有人</bank_user>
         <card_num>会员卡卡号</card_num>
         <gender>性别</gender>
         <qq>qq号码</qq>
@@ -666,6 +670,7 @@ POST https://$ip:$port/user/login
     <license_url>营业执照url</license_url>
     <bank_card_id>银行卡卡号</bank_card_id>
     <bank>开户银行</bank>
+    <bank_user>银行卡所有人</bank_user>
     <card_num>会员卡卡号</card_num>
     <gender>性别</gender>
     <qq>qq号码</qq>
@@ -773,17 +778,58 @@ POST https://$ip:$port/add/trade
 
 * 514: 积分不足
 
-## 会员卡管理
+## 设置用户积分
+
+POST https://$ip:$port/user/set_point
+
+```
+<request>
+    <auth_id></auth_id>
+    <id>用户id</id>
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+## 商家向总管理申请积分
+POST https://$ip:$port/user/apply_point
+
+```
+<request>
+    <auth_id></auth_id>
+    <point>点数</point>
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+## 用户管理
 
 POST https://$ip:$port/user_account/manage
 
 ```
 <request>
     <auth_id></auth_id>
-    <id>会员卡ID</id>
-    <operation>disable, reset_password</operation>
+    <id>用户ID</id>
+    <operation>disable, reset_password, confirm_real_name, confirm_real_company</operation>
 </request>
 ```
+
+disable表示禁用帐号， reset_password表示重设密码， confirm_real_name表示确认实名， confirm_real_comany表示确认实体店铺
 
 成功返回
 
