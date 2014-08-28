@@ -312,6 +312,7 @@ POST https://$ip:$port/get/point_allocation
     <setting>
        <value>
           <id></id>
+          <province_id>省ID</province_id>
           <province>省</province>
           <platform>平台分成比例, 小数</platform>
           <agency1>省代理分成比例, 小数</agency1>
@@ -328,7 +329,7 @@ POST https://$ip:$port/get/point_allocation
 
 ## 设置分成比例
 
-POST https://$ip:$port/get/point_allocation
+POST https://$ip:$port/set/point_allocation
 
 ```
 <request>
@@ -350,6 +351,8 @@ POST https://$ip:$port/get/point_allocation
 * 510: 分成比例不正确， 加起来不是100%
 
 ## 添加分成比例
+
+POST https://$ip:$port/add/point_allocation
 
 ```
 <request>
