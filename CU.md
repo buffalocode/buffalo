@@ -136,6 +136,7 @@ POST https://$ip:$port/user/add
     <user>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
+        <phone>手机</phone>
         <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
         <province_id>省ID</province_id>
         <city_id>市ID</city_id>
@@ -193,6 +194,7 @@ POST https://$ip:$port/user/waiting
             <id>用户ID</id>
             <name>用户姓名(中英文)</name>
             <tel>固定电话(数字, +, 中划线)</tel>
+            <phone>手机</phone>
             <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
             <adress>用户的详细地址</adress>
             <company>公司名</company>
@@ -239,7 +241,7 @@ POST https://$ip:$port/statistics
     <province_id>省ID</province_id>
     <city_id>市ID</city_id>
     <district_id>县区ID</district_id>
-    <company_id>商家ID</company_id>
+    <assoc_with_id>相关某人的ID</assoc_with_id>
     <offset>分页offset</offset>
     <limit>分页limit</limit>
 </request>
@@ -247,6 +249,8 @@ POST https://$ip:$port/statistics
 
 如果起始时间和结束时间都为空，则返回所有时间的
 如果只想统计某个省的， 只需要填写省ID，以此类推
+
+如果想统计和某个用户ID相关的东西， assoc_with_id填上该用户ID, 用户可能是商家， 代理，业务员等
 
 成功返回:
 
@@ -420,6 +424,7 @@ POST https://$ip:$port/user/edit
     <user>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
+        <phone>手机</phone>
         <adress>用户的详细地址</adress>
         <company>公司名</company>
         <post_code>邮编</post_code>
@@ -469,7 +474,10 @@ POST https://$ip:$port/list/kinds
     <province_id>省ID</province_id>
     <city_id>市ID</city_id>
     <district_id>县区ID</district_id>
-    <company_id>商家ID</company_id>
+    <assoc_with_id>相关某人的ID</assoc_with_id>
+    <trade_spec>
+       <type>1. 已完成交易， 2.未完成交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</type>
+    </trade_spec>
     <offset>分页offset</offset>
     <limit>分页limit</limit>
 </request>
@@ -478,9 +486,13 @@ POST https://$ip:$port/list/kinds
 如果起始时间和结束时间都为空，则返回所有时间的
 如果只想统计某个省的， 只需要填写省ID，以此类推
 
+assoc_with_id见前面解释
+
+trade_spec只有在type为trade时才要出现
+
 成功返回:
 
-如果查询的是user, company, agency1, agency2, agency3, user1, user2返回格式为
+如果查询的是user, company, agency1, agency2, agency3, user1返回格式为
 
 ```
 <response>
@@ -490,6 +502,7 @@ POST https://$ip:$port/list/kinds
         <id></id>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
+        <phone>手机</phone>
         <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
         <province>省名称</province>
         <city>市名称</city>
@@ -513,6 +526,8 @@ POST https://$ip:$port/list/kinds
 </response>
 ```
 
+如果查询的是user2, 还会有`<member_count>`返回，用于表示该注册员注册的会员数
+
 如果查询的是trade, 则返回:
 
 ```
@@ -522,6 +537,8 @@ POST https://$ip:$port/list/kinds
      <item>
         <id></id>
         <name>用户姓名(中英文)</name>
+        <point_belong_to_me>自己的收益积分</point_belong_to_me>
+        <card_num>会员卡卡号</card_num>
         <where>消费地点</where>
         <good_name>商品名</good_name>
         <type>1现金，2积分</type>
@@ -542,7 +559,7 @@ POST https://$ip:$port/search/kinds
 ```
 <request>
     <auth_id></auth_id>
-    <kind>name|tel|id_card</kind>
+    <kind>name|tel|id_card|phone|address</kind>
     <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 0表示不限定type</type>
     <value>搜索值</value>         
     <offset>分页offset</offset>
@@ -560,6 +577,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <id></id>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
+        <phone>手机</phone>
         <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
         <province>省名称</province>
         <city>市名称</city>
@@ -657,6 +675,7 @@ POST https://$ip:$port/user/login
     <id></id>
     <name>用户姓名(中英文)</name>
     <tel>固定电话(数字, +, 中划线)</tel>
+    <phone>手机</phone>
     <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
     <province>省名称</province>
     <city>市名称</city>
