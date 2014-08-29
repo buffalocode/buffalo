@@ -439,7 +439,7 @@ POST https://$ip:$port/user/edit
         <certification>荣誉证书base64编码</certification>
         <license>营业执照base64编码</license>
         <card_num>会员卡卡号</card_num>
-        <gender>性别</gender>
+        <gender>性别, 0表示男，1表示女</gender>
         <qq>qq号码</qq>
     </user>
 </request>
@@ -753,6 +753,7 @@ POST https://$ip:$port/good/list_point
 ```
 <request>
     <auth_id></auth_id>
+    <good_name>商品名， 可以不填</good_name>
     <offset></offset>
     <limit></limit>
 </request>
@@ -785,6 +786,7 @@ POST https://$ip:$port/add/trade
     <type>1现金，2积分</type>
     <price>价格/积分</price>
     <point>产生积分</point>
+    <card_num>积分卡卡号</card_num>
 </request>
 ```
 成功返回
