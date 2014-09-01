@@ -141,7 +141,7 @@ POST https://$ip:$port/user/add
         <province_id>省ID</province_id>
         <city_id>市ID</city_id>
         <district_id>县区ID</district_id>
-        <adress>用户的详细地址</adress>
+        <address>用户的详细地址</address>
         <company>公司名</company>
         <post_code>邮编</post_code>
         <id_card>身份证号码</id_card>
@@ -196,7 +196,7 @@ POST https://$ip:$port/user/waiting
             <tel>固定电话(数字, +, 中划线)</tel>
             <phone>手机</phone>
             <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
-            <adress>用户的详细地址</adress>
+            <address>用户的详细地址</address>
             <company>公司名</company>
             <post_code>邮编</post_code>
             <id_card>身份证号码</id_card>
@@ -428,7 +428,7 @@ POST https://$ip:$port/user/edit
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
         <phone>手机</phone>
-        <adress>用户的详细地址</adress>
+        <address>用户的详细地址</address>
         <company>公司名</company>
         <post_code>邮编</post_code>
         <id_card>身份证号码</id_card>
@@ -510,7 +510,7 @@ trade_spec只有在type为trade时才要出现
         <province>省名称</province>
         <city>市名称</city>
         <district>县名称</district_id>
-        <adress>用户的详细地址</adress>
+        <address>用户的详细地址</address>
         <company>公司名</company>
         <post_code>邮编</post_code>
         <id_card>身份证号码</id_card>
@@ -588,7 +588,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <province>省名称</province>
         <city>市名称</city>
         <district>县名称</district_id>
-        <adress>用户的详细地址</adress>
+        <address>用户的详细地址</address>
         <company>公司名</company>
         <post_code>邮编</post_code>
         <id_card>身份证号码</id_card>
@@ -686,7 +686,7 @@ POST https://$ip:$port/user/login
     <province>省名称</province>
     <city>市名称</city>
     <district>县名称</district_id>
-    <adress>用户的详细地址</adress>
+    <address>用户的详细地址</address>
     <company>公司名</company>
     <post_code>邮编</post_code>
     <id_card>身份证号码</id_card>
