@@ -540,7 +540,7 @@ trade_spec只有在type为trade时才要出现
      <item>
         <id></id>
         <name>用户姓名(中英文)</name>
-        <type>用户类型</type>
+        <user_type>用户类型</user_type>
         <point_belong_to_me>自己的收益积分</point_belong_to_me>
         <card_num>会员卡卡号</card_num>
         <where>消费地点</where>
