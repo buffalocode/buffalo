@@ -549,9 +549,14 @@ trade_spec只有在type为trade时才要出现
         <price>商品价格</price>
         <type>1现金，2积分</type>
         <used>消费钱或者积分</used>
-        <point>产生积分</point>
+        <point>产生积分或金钱</point>
         <time>交易时间</time>
         <trade_type>交易类型, 1. 已完成交易， 2.未完成交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</trade_type>
+        <bank_spec> //积分提现， 充值， 积分提现申请时需要
+            <bank_card_id>银行卡卡号</bank_card_id>
+            <bank>开户银行</bank>
+            <bank_user>银行卡所有人</bank_user>
+        </bank_spec>
      </item>
    </items>
 </response>
