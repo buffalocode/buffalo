@@ -540,15 +540,18 @@ trade_spec只有在type为trade时才要出现
      <item>
         <id></id>
         <name>用户姓名(中英文)</name>
+        <type>用户类型</type>
         <point_belong_to_me>自己的收益积分</point_belong_to_me>
         <card_num>会员卡卡号</card_num>
         <where>消费地点</where>
+        <company>商家名</company>
         <good_name>商品名</good_name>
+        <price>商品价格</price>
         <type>1现金，2积分</type>
-        <price>价格/积分</price>
-        <price>消费金额</price>
+        <used>消费钱或者积分</used>
         <point>产生积分</point>
         <time>交易时间</time>
+        <trade_type>交易类型, 1. 已完成交易， 2.未完成交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</trade_type>
      </item>
    </items>
 </response>
