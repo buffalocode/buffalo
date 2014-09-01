@@ -22,7 +22,7 @@
 
 GET https://$ip:$port/user/provinces
 
-* 成功，返回
+* 成功，返回 
 
 ```
 <response>
