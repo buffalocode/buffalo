@@ -424,6 +424,7 @@ POST https://$ip:$port/user/edit
 ```
 <request>
     <auth_id>auth_id</auth_id>
+    <user_id>如果修改的人是总管理，需要填写被修改的用户id</user_id>
     <user>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
@@ -571,7 +572,7 @@ POST https://$ip:$port/search/kinds
 ```
 <request>
     <auth_id></auth_id>
-    <kind>name|tel|id_card|phone|address</kind>
+    <kind>name|tel|id_card|phone|address|id</kind>
     <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 0表示不限定type</type>
     <value>搜索值</value>         
     <offset>分页offset</offset>
@@ -819,6 +820,7 @@ POST https://$ip:$port/user/set_point
 <request>
     <auth_id></auth_id>
     <id>用户id</id>
+    <point>积分</point>
 </request>
 ```
 
