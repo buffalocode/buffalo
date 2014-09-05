@@ -40,7 +40,7 @@ GET https://$ip:$port/user/provinces
 ```
 
 ## 查找某省的地区
-GET https://$ip:$port/user/city
+POST https://$ip:$port/user/city
 
 ```
 <request>
@@ -66,7 +66,7 @@ GET https://$ip:$port/user/city
 ```
 
 ## 查找某市的区县
-GET https://$ip:$port/user/district
+POST https://$ip:$port/user/district
 
 ```
 <request>
