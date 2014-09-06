@@ -91,6 +91,20 @@ POST https://$ip:$port/user/district
 </response>
 ```
 
+## 获取验证图片
+
+GET https://$ip:$port/auth/picture
+
+* 成功， 返回
+
+```
+<response>
+    <url>产生的验证图片地址</url>
+    <auth_pic_id>验证图片ID</auth_pic_id>
+</response>
+```
+
+
 ## 用户注册
 用户注册帐号
 
