@@ -185,6 +185,8 @@ POST https://$ip:$port/user/add
 * 503: 固定电话不正确
 * 506: email不正确
 * 507: 权限不足
+* 520: ass_user不存在
+* 521: ass_user权限不足
 
 
 ## 查看等待批准的申请
