@@ -704,6 +704,7 @@ POST https://$ip:$port/user/login
     <auth_id></auth_id>
     <id></id>
     <name>用户姓名(中英文)</name>
+    <user>用户名</user>
     <tel>固定电话(数字, +, 中划线)</tel>
     <phone>手机</phone>
     <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员</type>
