@@ -247,6 +247,17 @@ POST https://$ip:$port/user/approve
 可能的失败吗
 无
 
+## 拒绝申请
+POST https://$ip:$port/user/deny
+
+```
+<request>
+    <auth_id></auth_id>
+    <id>被拒绝的user id</id>
+</request>
+```
+
+
 ## 数据统计
 POST https://$ip:$port/statistics
 
