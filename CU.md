@@ -211,7 +211,7 @@ POST https://$ip:$port/user/waiting
             <name>用户姓名(中英文)</name>
             <tel>固定电话(数字, +, 中划线)</tel>
             <phone>手机</phone>
-            <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
+            <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员</type>
             <address>用户的详细地址</address>
             <company>公司名</company>
             <post_code>邮编</post_code>
@@ -523,7 +523,7 @@ trade_spec只有在type为trade时才要出现
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
         <phone>手机</phone>
-        <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
+        <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员</type>
         <province>省名称</province>
         <city>市名称</city>
         <district>县名称</district_id>
@@ -589,7 +589,7 @@ POST https://$ip:$port/search/kinds
 <request>
     <auth_id></auth_id>
     <kind>name|tel|id_card|phone|address|id</kind>
-    <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 0表示不限定type</type>
+    <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员, 0表示不限定type</type>
     <value>搜索值</value>         
     <offset>分页offset</offset>
     <limit>分页limit</limit>
@@ -607,7 +607,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
         <phone>手机</phone>
-        <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
+        <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员</type>
         <province>省名称</province>
         <city>市名称</city>
         <district>县名称</district_id>
@@ -705,7 +705,7 @@ POST https://$ip:$port/user/login
     <name>用户姓名(中英文)</name>
     <tel>固定电话(数字, +, 中划线)</tel>
     <phone>手机</phone>
-    <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员</type>
+    <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员</type>
     <province>省名称</province>
     <city>市名称</city>
     <district>县名称</district_id>
@@ -726,6 +726,12 @@ POST https://$ip:$port/user/login
  </item>
 </response>
 ```
+
+可能的错误
+
+* 518: 用户名不正确
+* 519: 密码不正确
+
 
 ## 用户登出
 
