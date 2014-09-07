@@ -701,6 +701,7 @@ POST https://$ip:$port/user/login
 ```
 <response>
  <item>
+    <auth_id></auth_id>
     <id></id>
     <name>用户姓名(中英文)</name>
     <tel>固定电话(数字, +, 中划线)</tel>
