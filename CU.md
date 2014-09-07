@@ -160,8 +160,8 @@ POST https://$ip:$port/user/add
         <post_code>邮编</post_code>
         <id_card>身份证号码</id_card>
         <catelog>所属分类</catelog>
-        <certification>荣誉证书base64编码</certification>
-        <license>营业执照base64编码</license>
+        <certification>荣誉证书url</certification>
+        <license>营业执照url</license>
         <ass_user>关联上级的用户名</ass_user>
     </user>
 </request>
@@ -727,7 +727,7 @@ POST https://$ip:$port/user/login
 
 ## 用户登出
 
-POST https://$ip:$port/user/login
+POST https://$ip:$port/user/logout
 
 
 ## 会员通知
