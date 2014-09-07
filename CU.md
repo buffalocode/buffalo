@@ -112,7 +112,6 @@ POST https://$ip:$port/user/register
 
 ```
 <request>
-    <auth_id>auth_id</auth_id>
     <user>
         <user>用户名(中英文),数字，下划线，中划线</user>
         <password>英文，密码</password>
