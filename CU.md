@@ -245,7 +245,9 @@ POST https://$ip:$port/user/approve
 ```
 
 可能的失败吗
-无
+
+* 523: user不存在
+* 507: 权限不足
 
 ## 拒绝申请
 POST https://$ip:$port/user/deny
