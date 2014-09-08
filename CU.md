@@ -694,6 +694,7 @@ POST https://$ip:$port/user/recruit
 可能的失败码：
 
  * 502: user已经被占用
+ * 507: 权限不足
 
 ## 修改密码
 POST https://$ip:$port/user/change_password
