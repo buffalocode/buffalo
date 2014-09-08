@@ -516,7 +516,7 @@ POST https://$ip:$port/list/kinds
     <district_id>县区ID</district_id>
     <assoc_with_id>相关某人的ID</assoc_with_id>
     <trade_spec>
-       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</type>
+       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 充值</type>
        <is_finished>0或1， 0表示未完成， 1表示已完成</is_finished>
        <is_from>0 或 1, 是否是交易的发起方</is_from>
     </trade_spec>
@@ -592,9 +592,9 @@ trade_spec只有在type为trade时才要出现
         <produce_type>产生的类型： 1现金，2积分</produce_type>
         <producted>产生积分或金钱</producted>
         <time>交易时间</time>
-        <trade_type>交易类型, 1. 商品交易 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</trade_type>
+        <trade_type>交易类型, 1. 商品交易 3，回档交易, 4. 积分提现, 5. 充值</trade_type>
         <is_finished>0或1</is_finished>
-        <bank_spec> //积分提现， 充值， 积分提现申请时需要
+        <bank_spec> //积分提现， 充值时需要
             <bank_card_id>银行卡卡号</bank_card_id>
             <bank>开户银行</bank>
             <bank_user>银行卡所有人</bank_user>
