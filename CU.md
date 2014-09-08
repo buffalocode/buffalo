@@ -836,6 +836,17 @@ POST https://$ip:$port/good/list_point
 </response>
 ```
 
+## 删除商品积分
+
+POST https://$ip:$port/good/del_point
+
+```
+<request>
+    <auth_id></auth_id>
+    <id>商品积分id</id>
+</request>
+```
+
 ## 添加交易
 
 POST https://$ip:$port/add/trade
