@@ -527,6 +527,7 @@ POST https://$ip:$port/list/kinds
     <trade_spec>
        <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</type>
        <is_finished>0或1， 0表示未完成， 1表示已完成</is_finished>
+       <is_from>0 或 1, 是否是交易的发起方</is_from>
     </trade_spec>
     <offset>分页offset</offset>
     <limit>分页limit</limit>
