@@ -659,6 +659,10 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
 </response>
 ```
 
+可能的错误码
+
+* 526: 搜索条件不正确
+
 ## 会员办卡
 
 POST https://$ip:$port/user/recruit
