@@ -453,6 +453,26 @@ https://$ip:$port/user/point_to_money
 
 * 508: 积分不足
 
+## 同意用户提现
+
+https://$ip:$port/user/approve_ptm
+
+```
+<request>
+    <auth_id></auth_id>
+    <point>积分</point>
+</request>
+```
+
+* 申请成功
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+
 ## 用户修改信息
 
 POST https://$ip:$port/user/edit
