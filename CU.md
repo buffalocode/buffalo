@@ -803,6 +803,10 @@ POST https://$ip:$port/good/point
 </response>
 ```
 
+可能的失败码
+
+* 507: 权限不足         -- 只有注册员或者商家才能设置商品积分
+
 
 ##  获取商品积分列表
 POST https://$ip:$port/good/list_point
