@@ -893,7 +893,7 @@ POST https://$ip:$port/add/trade
 
 * 514: 积分不足
 
-## 设置用户积分
+## 设置用户积分 [will not be used]
 
 POST https://$ip:$port/user/set_point
 
@@ -902,6 +902,26 @@ POST https://$ip:$port/user/set_point
     <auth_id></auth_id>
     <id>用户id</id>
     <point>积分</point>
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+## 批准积分申请
+
+POST https://$ip:$port/user/approve_point
+
+```
+<request>
+    <auth_id></auth_id>
+    <trade_id>申请积分的id号</trade_id>
 </request>
 ```
 
