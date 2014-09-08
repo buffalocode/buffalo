@@ -949,3 +949,7 @@ disable表示禁用帐号， reset_password表示重设密码， confirm_real_na
 </response>
 
 ```
+
+可能的错误
+
+* 525: 找不到该用户
