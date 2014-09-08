@@ -633,6 +633,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
    <items>
      <item>
         <id></id>
+        <user></user>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
         <phone>手机</phone>
