@@ -525,7 +525,8 @@ POST https://$ip:$port/list/kinds
     <district_id>县区ID</district_id>
     <assoc_with_id>相关某人的ID</assoc_with_id>
     <trade_spec>
-       <type>1. 已完成交易， 2.未完成交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</type>
+       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 充值, 6.积分提现申请</type>
+       <is_finished>0或1， 0表示未完成， 1表示已完成</is_finished>
     </trade_spec>
     <offset>分页offset</offset>
     <limit>分页limit</limit>
