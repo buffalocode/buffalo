@@ -874,6 +874,7 @@ POST https://$ip:$port/add/trade
 <request>
     <auth_id></auth_id>
     <good_name>商品名</good_name>
+    <good_price>商品价格</good_price>
     <type>1现金，2积分</type>
     <price>价格/积分</price>
     <point>产生积分</point>
