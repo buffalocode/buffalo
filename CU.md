@@ -383,6 +383,17 @@ POST https://$ip:$port/set/point_allocation
 
 * 510: 分成比例不正确， 加起来不是100%
 
+## 删除分成比例
+
+POST https://$ip:$port/del/point_allocation
+
+```
+<request>
+    <auth_id></auth_id>
+    <id>分成比例ID</id>
+</request>
+```
+
 ## 添加分成比例
 
 POST https://$ip:$port/add/point_allocation
