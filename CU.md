@@ -893,6 +893,7 @@ POST https://$ip:$port/add/trade
 
 * 514: 积分不足
 * 528: 积分卡卡号不正确
+* 529: 所在省的积分方案未设定
 
 ## 设置用户积分 [will not be used]
 
