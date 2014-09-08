@@ -892,7 +892,7 @@ POST https://$ip:$port/add/trade
 可能的失败码:
 
 * 514: 积分不足
-* 515: 积分卡卡号不正确
+* 528: 积分卡卡号不正确
 
 ## 设置用户积分 [will not be used]
 
