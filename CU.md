@@ -482,8 +482,8 @@ POST https://$ip:$port/user/edit
         <bank_card_id>银行卡卡号</bank_card_id>
         <bank>开户银行</bank>
         <bank_user>银行卡所有人</bank_user>
-        <certification>荣誉证书base64编码</certification>
-        <license>营业执照base64编码</license>
+        <certification>荣誉证书url</certification>
+        <license>营业执照url</license>
         <card_num>会员卡卡号</card_num>
         <gender>性别, 0表示男，1表示女</gender>
         <qq>qq号码</qq>
