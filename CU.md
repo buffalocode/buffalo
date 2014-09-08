@@ -549,6 +549,7 @@ trade_spec只有在type为trade时才要出现
    <items>
      <item>
         <id></id>
+        <user></user>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
         <phone>手机</phone>
