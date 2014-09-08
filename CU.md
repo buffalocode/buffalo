@@ -449,16 +449,6 @@ https://$ip:$port/user/point_to_money
 </response>
 ```
 
-* 创建失败，返回
-
-```
-<response>
-    <result>error</result>
-    <error_code>错误代码</error_code>
-    <error_desc>错误描述</error_desc>
-</response>
-```
-
 可能的失败码
 
 * 508: 积分不足
