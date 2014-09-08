@@ -826,12 +826,14 @@ POST https://$ip:$port/good/list_point
 <response>
     <count>个数</count>
     <items>
+       <item>
         <id></id>
         <auth_id></auth_id>
         <name>商品名</name>
         <price>单价</price>
         <point_type>1或2， 1表示单价百分比获取积分， 2表示固定积分</point_type>
         <value>值</value>
+       </item>
     </items>
 </response>
 ```
