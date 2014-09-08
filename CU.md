@@ -756,6 +756,12 @@ POST https://$ip:$port/user/login
 
 POST https://$ip:$port/user/logout
 
+```
+<request>
+  <auth_id></auth_id>
+</request>
+```
+
 
 ## 会员通知
 POST https://$ip:$port/user/notify
