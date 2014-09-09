@@ -653,9 +653,12 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <tel>固定电话(数字, +, 中划线)</tel>
         <phone>手机</phone>
         <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员</type>
+        <province_id>省id</province_id>
         <province>省名称</province>
+        <city_id>市id</city_id>
         <city>市名称</city>
-        <district>县名称</district_id>
+        <district_id>县id</district_id>
+        <district>县名称</district>
         <address>用户的详细地址</address>
         <company>公司名</company>
         <post_code>邮编</post_code>
