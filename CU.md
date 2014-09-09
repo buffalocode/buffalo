@@ -983,7 +983,7 @@ POST https://$ip:$port/user_account/manage
 </request>
 ```
 
-disable表示禁用帐号， reset_password表示重设密码， confirm_real_name表示确认实名， confirm_real_comany表示确认实体店铺
+disable表示禁用帐号， enable表示解除禁用帐号， reset_password表示重设密码， confirm_real_name表示确认实名， confirm_real_comany表示确认实体店铺
 
 成功返回
 
