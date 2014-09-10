@@ -690,7 +690,6 @@ POST https://$ip:$port/user/recruit
 <request>
     <auth_id></auth_id>
     <user>用户名(中英文),数字，下划线，中划线</user>
-    <password>英文，密码</password>
     <phone>手机</phone>
     <email></email>
     <card_num>会员卡卡号</card_num>
@@ -709,6 +708,9 @@ POST https://$ip:$port/user/recruit
 </response>
 
 ```
+
+系统为会员设置默认密码666666
+
 可能的失败码：
 
  * 502: user已经被占用
