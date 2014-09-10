@@ -716,6 +716,7 @@ POST https://$ip:$port/user/recruit
 
  * 502: user已经被占用
  * 507: 权限不足
+ * 534: card_num已经被使用
 
 ## 修改密码
 POST https://$ip:$port/user/change_password
