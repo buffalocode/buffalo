@@ -547,6 +547,7 @@ POST https://$ip:$port/list/kinds
     </trade_spec>
     <offset>分页offset</offset>
     <limit>分页limit</limit>
+    <order>asc 或者 desc</order>
 </request>
 ```
 
