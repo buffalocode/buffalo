@@ -589,6 +589,9 @@ trade_spec只有在type为trade时才要出现
         <gender>性别</gender>
         <qq>qq号码</qq>
         <point>点数</point>
+        <enabled>是否已启用</enabled>
+        <real_name>是否实名</real_name>
+        <real_company>是否实名公司</real_company>
         <recruited_at>如果查询的是user2和user, 这会显示所属的商家. 查询其它类型，则此为空<recruited_at>
      </item>
    </items>
