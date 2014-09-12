@@ -687,6 +687,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <gender>性别</gender>
         <qq>qq号码</qq>
         <point>点数</point>
+        <recruited_at>为其办会员的商家</recruited_at>
      </item>
    </items>
 </response>
