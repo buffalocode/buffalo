@@ -827,7 +827,7 @@ POST https://$ip:$port/user/notify
 ```
 <request>
     <auth_id></auth_id>
-    <type>1表示所有会员， 2表示所有省代理， 3表示所有区域代理，4表示所有县市代理，5表示所有商家</type>
+    <type>1表示所有会员， 2表示所有省代理， 3表示所有区域代理，4表示所有县市代理，5表示所有业务员, 6表示所有商家，7表示所有注册员 </type>
     <title>标题</title>
     <content>内容</content>
 </request>
