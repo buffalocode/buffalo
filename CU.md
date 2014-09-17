@@ -117,7 +117,9 @@ POST https://$ip:$port/user/register
         <user>用户名(中英文),数字，下划线，中划线</user>
         <password>英文，密码</password>
         <email></email>
-        <challenge_by_text>0或1. 是否用手机短信进行验证，如果是下面auth_pic_num和auth_pic_id不需要填写</challenge_by_text>
+        <challenge_by_text>是否用手机短信进行验证，如果是下面auth_pic_num和auth_pic_id不需要填写.
+        如果是， 填写platform_auth_id的内容
+        </challenge_by_text>
         <auth_pic_num>验证图片上的字符</auth_pic_num>
         <auth_pic_id>验证图片ID</auth_pic_id>
     </user>
