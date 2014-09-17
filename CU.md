@@ -1023,3 +1023,22 @@ disable表示禁用帐号， enable表示解除禁用帐号， reset_password表
 可能的错误
 
 * 525: 找不到该用户
+
+
+## 发送短信验证号码给用户
+POST https://$ip:$port/notify/send_text_challenge
+
+```
+<request>
+    <platform_auth_id>只有手机软件和服务器知道的一个字符串，为了防止没权限的人发短信</platform_auth_id>
+    <phone>手机号码</phone>
+</request>
+```
+
+成功返回
+```
+<response>
+    <challenge_code>用户需要输入的challenge_code</challenge_code>
+    <expire_time>几秒后过期</expire_time>
+</response>
+```
