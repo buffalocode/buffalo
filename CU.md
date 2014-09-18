@@ -143,6 +143,7 @@ POST https://$ip:$port/user/register
 * 515: 验证码不正确
 * 516: email不符合规范
 * 517: email已经被占用
+* 544: challenge_by_text不正确
 
 ## 用户加盟成商家
 整个系统在开始的时候会在数据库内插入一个用户，该用户为超级用户，为总管理,
