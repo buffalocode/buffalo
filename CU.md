@@ -1066,3 +1066,7 @@ POST https://$ip:$port/trade/rollback
 </response>
 
 ```
+
+可能的失败码
+* 545: 交易未找到
+* 546: 交易类型不正确
