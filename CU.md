@@ -498,6 +498,7 @@ POST https://$ip:$port/user/edit
         <bank_card_id>银行卡卡号</bank_card_id>
         <bank>开户银行</bank>
         <bank_user>银行卡所有人</bank_user>
+        <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
         <certification>荣誉证书url</certification>
         <license>营业执照url</license>
         <card_num>会员卡卡号</card_num>
@@ -588,6 +589,7 @@ trade_spec只有在type为trade时才要出现
         <certification_url>荣誉证书url</certification_url>
         <license_url>营业执照url</license_url>
         <bank_card_id>银行卡卡号</bank_card_id>
+        <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
         <bank>开户银行</bank>
         <bank_user>银行卡所有人</bank_user>
         <card_num>会员卡卡号</card_num>
@@ -632,6 +634,7 @@ trade_spec只有在type为trade时才要出现
             <bank_card_id>银行卡卡号</bank_card_id>
             <bank>开户银行</bank>
             <bank_user>银行卡所有人</bank_user>
+            <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
         </bank_spec>
      </item>
    </items>
@@ -687,6 +690,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <bank_card_id>银行卡卡号</bank_card_id>
         <bank>开户银行</bank>
         <bank_user>银行卡所有人</bank_user>
+        <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
         <card_num>会员卡卡号</card_num>
         <gender>性别</gender>
         <qq>qq号码</qq>
@@ -799,6 +803,7 @@ POST https://$ip:$port/user/login
     <bank_card_id>银行卡卡号</bank_card_id>
     <bank>开户银行</bank>
     <bank_user>银行卡所有人</bank_user>
+    <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
     <card_num>会员卡卡号</card_num>
     <gender>性别</gender>
     <qq>qq号码</qq>
