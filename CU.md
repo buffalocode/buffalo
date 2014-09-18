@@ -1046,3 +1046,23 @@ POST https://$ip:$port/notify/send_text_challenge
     <expire_time>几秒后过期</expire_time>
 </response>
 ```
+
+## 回档交易
+
+POST https://$ip:$port/trade/rollback
+
+```
+<request>
+    <auth_id></auth_id>
+    <trade_id></trade_id>
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
