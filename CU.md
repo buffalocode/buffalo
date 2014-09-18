@@ -523,6 +523,7 @@ certification和license不是必填的， 如果用户没修改，则设置为�
 可能错误：
 
 见新建用户
+* 550: virtual_bank_card_id已经被其它人使用
 
 
 ## 列表
