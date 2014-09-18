@@ -982,6 +982,10 @@ POST https://$ip:$port/user/approve_point
 
 ```
 
+可能的失败码
+
+* 549: 申请的积分不够所欠的
+
 ## 商家向总管理申请积分
 POST https://$ip:$port/user/apply_point
 
