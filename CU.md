@@ -486,6 +486,7 @@ POST https://$ip:$port/user/edit
 <request>
     <auth_id>auth_id</auth_id>
     <user_id>如果修改的人是总管理，需要填写被修改的用户id</user_id>
+    <set_virtual_bank_id>0, 1 或者不填</set_virtual_bank_id>
     <user>
         <name>用户姓名(中英文)</name>
         <tel>固定电话(数字, +, 中划线)</tel>
