@@ -465,7 +465,7 @@ https://$ip:$port/user/approve_ptm
 ```
 <request>
     <auth_id></auth_id>
-    <point>积分</point>
+    <trade_id>交易id</trade_id>
 </request>
 ```
 
