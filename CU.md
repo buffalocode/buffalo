@@ -810,7 +810,13 @@ POST https://$ip:$port/user/login
     <card_num>会员卡卡号</card_num>
     <gender>性别</gender>
     <qq>qq号码</qq>
-    <point>点数</point>
+    <point>当前的点数</point>
+    <total_point>总积分， 总共获得的积分数</total_point>
+    <ptm>提现积分</pmt>
+    <recharge_money>充值金钱</recharge_money>
+    <good_trade_point>会员使用积分进行交易时商家获得的积分</good_trade_point>
+    <share_point>因为积分分成得到的积分</share_point>
+    <member_count>会员个数</member_count>
  </item>
 </response>
 ```
