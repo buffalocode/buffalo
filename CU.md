@@ -261,6 +261,7 @@ POST https://$ip:$port/user/deny
 <request>
     <auth_id></auth_id>
     <id>被拒绝的user id</id>
+    <deny_reason>拒绝理由</deny_reason>
 </request>
 ```
 
