@@ -608,6 +608,7 @@ trade_spec只有在type为trade时才要出现
         <recharge_money>充值金钱</recharge_money>
         <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
         <share_point>因为积分分成得到的积分</share_point>
+        <used_point>积分消费总额</used_point>
      </item>
    </items>
 </response>
