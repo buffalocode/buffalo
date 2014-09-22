@@ -704,6 +704,16 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <gender>性别</gender>
         <qq>qq号码</qq>
         <point>点数</point>
+        <enabled>是否已启用</enabled>
+        <real_name>是否实名</real_name>
+        <real_company>是否实名公司</real_company>
+        <recruited_at>如果查询的是user2和user, 这会显示所属的商家. 查询其它类型，则此为空<recruited_at>
+        <total_point>总积分， 总共获得的积分数</total_point>
+        <ptm>提现积分</pmt>
+        <recharge_money>充值金钱</recharge_money>
+        <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
+        <share_point>因为积分分成得到的积分</share_point>
+        <used_point>积分消费总额</used_point>
         <recruited_at>为其办会员的商家</recruited_at>
      </item>
    </items>
