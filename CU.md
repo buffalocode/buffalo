@@ -569,6 +569,7 @@ trade_spec只有在type为trade时才要出现
 成功返回:
 
 如果查询的是user, company, agency1, agency2, agency3, user1返回格式为
+可以查询多种角色， 比如既想差agency1又想查agency2, 可以填agency1|agency2
 
 ```
 <response>
@@ -972,7 +973,7 @@ POST https://$ip:$port/add/trade
 * 528: 积分卡卡号不正确
 * 529: 所在省的积分方案未设定
 
-## 设置用户积分 [will not be used]
+## 设置用户积分
 
 POST https://$ip:$port/user/set_point
 
