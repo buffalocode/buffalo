@@ -993,6 +993,10 @@ POST https://$ip:$port/user/set_point
 
 ```
 
+可能的错误码
+* 556: 用户id不正确
+* 557: point不能为负数
+
 ## 批准积分申请
 
 POST https://$ip:$port/user/approve_point
