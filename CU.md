@@ -882,6 +882,7 @@ POST https://$ip:$port/good/point
 ```
 <request>
     <auth_id></auth_id>
+    <company_id>当设置的人是总管理或县代理的时候需要填写</company_id>
     <name>商品名</name>
     <price>单价</price>
     <point_type>1或2， 1表示单价百分比获取积分， 2表示固定积分</point_type>
