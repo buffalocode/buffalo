@@ -732,6 +732,7 @@ POST https://$ip:$port/user/recruit
 ```
 <request>
     <auth_id></auth_id>
+    <user2_id>如果是商家为会员办的卡， 需要填写注册员的id</user2_id>
     <user>用户名(中英文),数字，下划线，中划线</user>
     <phone>手机</phone>
     <email></email>
@@ -856,6 +857,15 @@ POST https://$ip:$port/user/logout
 </request>
 ```
 
+## 用户登录下级账户
+POST https://$ip:$port/user/login_lower
+
+```
+<request>
+    <auth_id></auth_id>
+    <lower_user_id>下级user_id</lower_user_id>
+</request>
+```
 
 ## 会员通知
 POST https://$ip:$port/user/notify
@@ -911,6 +921,7 @@ POST https://$ip:$port/good/list_point
 ```
 <request>
     <auth_id></auth_id>
+    <company_id>当设置的人是总管理或县代理的时候需要填写</company_id>
     <good_name>商品名， 可以不填</good_name>
     <offset></offset>
     <limit></limit>
@@ -941,6 +952,7 @@ POST https://$ip:$port/good/del_point
 ```
 <request>
     <auth_id></auth_id>
+    <company_id>当设置的人是总管理或县代理的时候需要填写</company_id>
     <id>商品积分id</id>
 </request>
 ```
