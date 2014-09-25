@@ -734,6 +734,7 @@ POST https://$ip:$port/user/recruit
     <auth_id></auth_id>
     <user2_id>如果是商家为会员办的卡， 需要填写注册员的id</user2_id>
     <user>用户名(中英文),数字，下划线，中划线</user>
+    <password>英文，密码, 如果为空， 则系统为用户设置默认密码</password>
     <phone>手机</phone>
     <email></email>
     <card_num>会员卡卡号</card_num>
