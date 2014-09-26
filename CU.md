@@ -610,6 +610,7 @@ trade_spec只有在type为trade时才要出现
         <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
         <share_point>因为积分分成得到的积分</share_point>
         <used_point>积分消费总额</used_point>
+        <created_at>创建时间</created_at>
      </item>
    </items>
 </response>
@@ -716,6 +717,7 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <share_point>因为积分分成得到的积分</share_point>
         <used_point>积分消费总额</used_point>
         <recruited_at>为其办会员的商家</recruited_at>
+        <created_at>创建时间</created_at>
      </item>
    </items>
 </response>
