@@ -170,6 +170,8 @@ POST https://$ip:$port/user/add
         <certification>荣誉证书url</certification>
         <license>营业执照url</license>
         <ass_user>关联上级的用户名</ass_user>
+        <longitude>经度</longitude>
+        <latitude>纬度<latitude>
     </user>
 </request>
 
