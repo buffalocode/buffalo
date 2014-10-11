@@ -643,12 +643,11 @@ trade_spec只有在type为trade时才要出现
         <time>交易时间</time>
         <trade_type>交易类型, 1. 商品交易 3，回档交易, 4. 积分提现, 5. 充值</trade_type>
         <is_finished>0或1</is_finished>
-        <bank_spec> //积分提现， 充值时需要
-            <bank_card_id>银行卡卡号</bank_card_id>
-            <bank>开户银行</bank>
-            <bank_user>银行卡所有人</bank_user>
-            <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
-        </bank_spec>
+        //积分提现， 充值时需要
+        <bank_card_id>银行卡卡号</bank_card_id>
+        <bank>开户银行</bank>
+        <bank_user>银行卡所有人</bank_user>
+        <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
      </item>
    </items>
 </response>
