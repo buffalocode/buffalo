@@ -944,7 +944,7 @@ POST https://$ip:$port/good/list_point
         <name>商品名</name>
         <price>单价</price>
         <point_type>1或2， 1表示单价百分比获取积分， 2表示固定积分</point_type>
-        <value>值</value>
+        <value>值, 如果是百分比，取值范围为0-1的浮点数</value>
        </item>
     </items>
 </response>
