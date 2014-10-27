@@ -1138,8 +1138,8 @@ POST https://$ip:$port/trade/batch_xls
 see http://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean
 
 需要的参数
-auth_id: 验证码,
-file: 文件
+* auth_id: 验证码,
+* file: 文件
 
 example http request message
 
