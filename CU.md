@@ -1129,3 +1129,33 @@ POST https://$ip:$port/trade/rollback
 可能的失败码
 * 545: 交易未找到
 * 546: 交易类型不正确
+
+
+## 导入交易信息
+POST https://$ip:$port/trade/batch_xls
+
+使用`multipart/form-data` to encode http body.
+see http://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean
+
+需要的参数
+auth_id: 验证码,
+file: 文件
+
+example http request message
+
+```
+POST /trade/batch_xls HTTP/1.1
+Host: 112.124.0.192:8081
+Cache-Control: no-cache
+
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="file"; filename="cu.txt"
+Content-Type: text/plain
+
+
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="auth_id"
+
+2k13jcadw
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+```
