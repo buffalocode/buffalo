@@ -554,6 +554,8 @@ POST https://$ip:$port/list/kinds
        对于商品交易，回档交易. from是user， to是company
        对于积分提现 from可能是agency1, agency2, ... user,  to是admin
        对于充值     from是company,  to是admin
+       
+       如果填的是3， 并且assoc_with_id填的是商家， 则查询和该商家有关的会员消费而产生的trade信息
        </is_from>
     </trade_spec>
     <offset>分页offset</offset>
