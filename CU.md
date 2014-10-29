@@ -1136,28 +1136,21 @@ POST https://$ip:$port/trade/rollback
 ## 导入交易信息
 POST https://$ip:$port/trade/batch_xls
 
-使用`multipart/form-data` to encode http body.
-see http://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean
-
-需要的参数
-* auth_id: 验证码,
-* file: 文件
-
-example http request message
-
 ```
-POST /trade/batch_xls HTTP/1.1
-Host: 112.124.0.192:8081
-Cache-Control: no-cache
-
-----WebKitFormBoundaryE19zNvXGzXaLvS5C
-Content-Disposition: form-data; name="file"; filename="cu.txt"
-Content-Type: text/plain
-
-
-----WebKitFormBoundaryE19zNvXGzXaLvS5C
-Content-Disposition: form-data; name="auth_id"
-
-2k13jcadw
-----WebKitFormBoundaryE19zNvXGzXaLvS5C
+<request>
+    <auth_id></auth_id>
+    <NewDataSet>
+        <Table>
+            <F1>行号</F1>
+            <F2>卡号</F2>
+            <F3>会员姓名</F3>
+            <F4>消费金额累计</F4>
+            <F5>积分累计</F5>
+            <F6>性别</F6>
+            <F7>电话</F7>
+            <F8>手机</F8>
+            <F9>地址</F9>
+        </Table>
+    </NewDataSet>
+</request>
 ```
