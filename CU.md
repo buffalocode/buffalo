@@ -792,6 +792,31 @@ POST https://$ip:$port/user/change_password
 * 512: 原密码不正确
 * 513: 新密码强度不够
 
+## 获取用户积分等信息
+POST https://$ip:$port/user/get_point_info
+
+```
+<request>
+    <auth_id></auth_id>
+</request>
+```
+
+```
+<response>
+ <item>
+    <point>当前的点数</point>
+    <total_point>总积分， 总共获得的积分数</total_point>
+    <ptm>提现积分</pmt>
+    <recharge_money>充值金钱</recharge_money>
+    <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
+    <share_point>因为积分分成得到的积分</share_point>
+    <used_point>积分消费总额(会员)/送出的积分(商家)</used_point>
+    <member_count>会员个数</member_count>
+ </item>
+</response>
+```
+
+
 ## 用户登录
 
 POST https://$ip:$port/user/login
