@@ -488,7 +488,9 @@ POST https://$ip:$port/user/edit
 ```
 <request>
     <auth_id>auth_id</auth_id>
-    <user_id>如果只想修改银行卡相关信息，这个需要填写。否则不需要填写</user_id>
+    <user_id>如果只想修改银行卡相关信息，这个需要填写。否则不需要填写.
+    上级只能修改下级的银行卡相关信息，不能修改其它信息
+    </user_id>
     <set_virtual_bank_id>0, 1 或者不填</set_virtual_bank_id>
     <user>
         <name>用户姓名(中英文)</name>
