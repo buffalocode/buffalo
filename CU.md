@@ -1000,6 +1000,7 @@ POST https://$ip:$port/add/trade
     <good_price>商品价格</good_price>
     <type>1现金，2积分</type>
     <price>价格/积分</price>
+    <password>会员密码，如果是积分交易， 需要填写</password>
     <extra_price>如果会员一部分用现金支付， 一部分用积分支付， 这填现金支付的部分</extra_price>
     <point>产生积分</point>
     <card_num>积分卡卡号</card_num>
