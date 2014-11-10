@@ -653,6 +653,12 @@ trade_spec只有在type为trade时才要出现
         <bank>开户银行</bank>
         <bank_user>银行卡所有人</bank_user>
         <virtual_bank_card_id>虚拟银行帐号</virtual_bank_card_id>
+        <province_id>商品交易时有这个</province_id>
+        <province>商品交易时有这个</province>
+        <city_id>商品交易时有这个</city_id>
+        <city>商品交易时有这个</city>
+        <district_id>商品交易时有这个</district_id>
+        <district>商品交易时有这个</district>
      </item>
    </items>
 </response>
