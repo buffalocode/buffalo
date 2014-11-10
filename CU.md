@@ -673,7 +673,7 @@ POST https://$ip:$port/search/kinds
     <kind>user|name|tel|id_card|phone|address|id|card_num|virtual_bank_card_id|company</kind>
     <type>类型： 1表示省代理，2表示地区代理，3表示县市代理，4表示业务员，5表示商家，6表示注册员, 7表示会员, 0表示不限定type</type>
     <value>搜索值</value>
-    <limit_lower>只搜索auth_id的下级</limit_lower>
+    <limit_lower>是否只搜索auth_id的下级, 0或1, 1表示只搜索下级</limit_lower>
     <offset>分页offset</offset>
     <limit>分页limit</limit>
 </request>
