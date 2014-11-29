@@ -660,6 +660,7 @@ trade_spec只有在type为trade时才要出现
         <city>商品交易时有这个</city>
         <district_id>商品交易时有这个</district_id>
         <district>商品交易时有这个</district>
+        <point_belong_to_user>会员的收益积分</point_belong_to_user>
      </item>
    </items>
 </response>
