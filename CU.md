@@ -564,6 +564,7 @@ POST https://$ip:$port/list/kinds
     <offset>分页offset</offset>
     <limit>分页limit</limit>
     <order>asc 或者 desc</order>
+    <order_by>查询为trade时， 可以填写, 按什么字段进行排序</order_by>
 </request>
 ```
 
