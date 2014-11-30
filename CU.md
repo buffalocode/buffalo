@@ -559,6 +559,7 @@ POST https://$ip:$port/list/kinds
        对于充值     from是company,  to是admin
        
        如果填的是3， 并且assoc_with_id填的是商家， 则查询和该商家有关的会员消费而产生的trade信息
+       如果填的是4， 则auth_id必须是商家的，assoc_with_id里面填会员的ids, 这样会查该商家注册的会员在该商家消费的记录
        </is_from>
     </trade_spec>
     <offset>分页offset</offset>
