@@ -480,6 +480,24 @@ https://$ip:$port/user/approve_ptm
 </response>
 ```
 
+## 删除用户
+
+POST https://$ip:$port/user/del
+
+```
+<request>
+    <auth_id></auth_id>
+    <user_id>要删除的用户的id</user_id>
+</request>
+```
+
+成功返回：
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
 
 ## 用户修改信息
 
