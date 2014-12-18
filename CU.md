@@ -769,6 +769,9 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <used_point>积分消费总额(会员)/送出的积分(商家)</used_point>
         <recruited_at>为其办会员的商家</recruited_at>
         <created_at>创建时间</created_at>
+        <user1_id>当user_type为5时输出，业务员的id</user1_id>
+        <user1_name>当user_type为5时输出，业务员的name</user1_name>
+        <user1_phone>当user_type为5时输出，业务员的phone</user1_phone>
      </item>
    </items>
 </response>
