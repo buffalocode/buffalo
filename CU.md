@@ -499,6 +499,19 @@ POST https://$ip:$port/user/del
 </response>
 ```
 
+## 总管理修改商家对应业务员的信息
+POST https://$ip:$port/user/edit_company_user1
+
+```
+<request>
+    <auth_id></auth_id>
+    <user_id>业务员id</user_id>
+    <name>业务员name</name>
+    <phone>业务员phone</phone>
+</request>
+```
+
+
 ## 用户修改信息
 
 POST https://$ip:$port/user/edit
@@ -639,6 +652,9 @@ trade_spec只有在type为trade时才要出现
         <share_point>因为积分分成得到的积分</share_point>
         <used_point>积分消费总额(会员)/送出的积分(商家)</used_point>
         <created_at>创建时间</created_at>
+        <user1_id>当user_type为5时输出，业务员的id</user1_id>
+        <user1_name>当user_type为5时输出，业务员的name</user1_name>
+        <user1_phone>当user_type为5时输出，业务员的phone</user1_phone>
      </item>
    </items>
 </response>
