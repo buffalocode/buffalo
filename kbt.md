@@ -108,13 +108,17 @@ response
 }
 ```
 
-## 获取某个国家激活设备数量
-* POST /kbt/count/devices
+## 获取某个国家用户数量, 设备数量
+* POST /kbt/count/all
 
 ```
 {
     "auth_token": "",
-    "countrycode": ""
+    "countrycode": "",
+    "device_count_from": Number,
+    "device_count_to": Number,
+    "user_count_from": Number,
+    "user_count_to": Number
 }
 ```
 response
@@ -122,29 +126,12 @@ response
 {
     "result": "ok" | "error",
     "code": Number,
-    "count": Number
+    "device_count": Number,
+    "user_count": Number
 }
 ```
-如果countrycode不填， 则获取全球激活设备的数量
-
-## 获取某个国家用户数量
-* POST /kbt/count/users
-
-```
-{
-    "auth_token": "",
-    "countrycode": ""
-}
-```
-response
-```
-{
-    "result": "ok" | "error",
-    "code": Number,
-    "count": Number
-}
-```
-如果countrycode不填， 则获取全球用户的数量
+countrycode如果不填， 则是全球的， device_count_from如果等于device_count_to, 则这2个选项无效, user_count_from,
+user_count_to同理
 
 ## 获取设备列表
 * POST /kbt/get/devices
