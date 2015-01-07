@@ -47,3 +47,43 @@ response
     }
 }
 ```
+
+## 找回密码
+* POST /kbt/forgot/password
+
+post content
+```
+{
+    "user": "email or phone"
+}
+```
+
+response
+```
+{
+    "result": "ok" | "error",
+    "code": Number,
+    "desc": "",
+}
+```
+
+## 修改密码
+* POST /kbt/change/password
+
+post content
+```
+{
+    "user": "email or phone",
+    "old_password": "",
+    "new_password": ""
+}
+```
+
+response
+```
+{
+    "result": "ok" | "error",
+    "code": Number,
+    "desc": "",
+}
+```
