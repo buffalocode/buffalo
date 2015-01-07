@@ -145,6 +145,7 @@ response
 {
     "result": "ok" | "error",
     "code": Number,
+    "desc": "",
     "count": Number,
     "devices": [
         {
@@ -155,5 +156,33 @@ response
 }
 ```
 
+## 获取用户列表
+```
+{
+    "auth_token": "",
+    "countrycode": "",
+    "offset": Number,
+    "limit": Number,
+    "order_by": "",
+    "order_type": "desc" | "asc"
+}
+```
+response
+```
+{
+    "result": "ok" | "error",
+    "code": Number,
+    "desc": "",
+    "count": Number,
+    "users": [
+        {
+            "register_time": "注册时间",
+            "phone": "手机",
+            "email": "邮箱",
+            "login_times": "登录次数"
+        }
+    ]
+}
+```
 
 
