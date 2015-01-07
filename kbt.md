@@ -109,7 +109,7 @@ response
 ```
 
 ## 获取某个国家激活设备数量
-* POST /kbt/get/devices_num
+* POST /kbt/count/devices
 
 ```
 {
@@ -122,10 +122,29 @@ response
 {
     "result": "ok" | "error",
     "code": Number,
-    "device_number": Number
+    "count": Number
 }
 ```
 如果countrycode不填， 则获取全球激活设备的数量
+
+## 获取某个国家用户数量
+* POST /kbt/count/users
+
+```
+{
+    "auth_token": "",
+    "countrycode": ""
+}
+```
+response
+```
+{
+    "result": "ok" | "error",
+    "code": Number,
+    "count": Number
+}
+```
+如果countrycode不填， 则获取全球用户的数量
 
 ## 获取设备列表
 * POST /kbt/get/devices
