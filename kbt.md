@@ -164,10 +164,14 @@ response
     "code": Number,
     "desc": "",
     "count": Number,
-    "devices": [
+    "infos": [
         {
-            "register_time": "激活时间",
-            "user": "激活用户"
+            "phone": "",
+            "email": "",
+            "login_times": Number,
+            "device_id": "",
+            "device_type": Number,
+            "device_register_datetime": ""
         }
     ]
 }
