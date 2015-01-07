@@ -1,5 +1,8 @@
 #服务器接口
 
+* device_type: 1) 汽车灯 2)摩托车灯 3)车载净化器
+
+
 ## 注册用户
 
 * POST /kbt/register/user
@@ -95,7 +98,8 @@ post content
 ```
 {
     "auth_token": "get by login",
-    "device_id": ""
+    "device_id": "",
+    "device_type": Number
 }
 ```
 
@@ -134,12 +138,19 @@ countrycode如果不填， 则是全球的， device_count_from如果等于devic
 user_count_to同理
 
 ## 获取设备列表
-* POST /kbt/get/devices
+* POST /kbt/search/devices
 
 ```
 {
     "auth_token": "",
     "countrycode": "",
+    "device_type": Number,
+    "device_id": "",
+    "user": "",
+    "login_times_from": Number,
+    "login_times_to": Number,
+    "device_register_datetime_from": "2033-11-22 11:11:11",
+    "device_register_datetime_to": "2033-11-22 11:11:11",
     "offset": Number,
     "limit": Number,
     "order_by": "",
@@ -162,33 +173,5 @@ response
 }
 ```
 
-## 获取用户列表
-```
-{
-    "auth_token": "",
-    "countrycode": "",
-    "offset": Number,
-    "limit": Number,
-    "order_by": "",
-    "order_type": "desc" | "asc"
-}
-```
-response
-```
-{
-    "result": "ok" | "error",
-    "code": Number,
-    "desc": "",
-    "count": Number,
-    "users": [
-        {
-            "register_time": "注册时间",
-            "phone": "手机",
-            "email": "邮箱",
-            "login_times": "登录次数"
-        }
-    ]
-}
-```
 
 
