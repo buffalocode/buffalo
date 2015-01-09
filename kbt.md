@@ -33,7 +33,8 @@ post content
 ```
 {
     "user": "email or phone",
-    "password": ""
+    "password": "",
+    "countrycode": Number
 }
 ```
 response
@@ -57,7 +58,8 @@ response
 post content
 ```
 {
-    "user": "email or phone"
+    "user": "email or phone",
+    "countrycode": Number
 }
 ```
 
@@ -78,7 +80,8 @@ post content
 {
     "user": "email or phone",
     "old_password": "",
-    "new_password": ""
+    "new_password": "",
+    "countrycode": Number
 }
 ```
 
