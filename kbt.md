@@ -102,7 +102,8 @@ post content
 {
     "auth_token": "get by login",
     "device_id": "",
-    "device_type": Number
+    "device_type": Number,
+    "countrycode": Number
 }
 ```
 
