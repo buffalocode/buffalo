@@ -126,7 +126,9 @@ response
     "device_count_from": Number,
     "device_count_to": Number,
     "user_count_from": Number,
-    "user_count_to": Number
+    "user_count_to": Number,
+    "offset": Number,
+    "limit": Number
 }
 ```
 response
