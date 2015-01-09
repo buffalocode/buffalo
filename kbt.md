@@ -122,7 +122,7 @@ response
 ```
 {
     "auth_token": "",
-    "countrycode": "",
+    "countrycode": Number,
     "device_count_from": Number,
     "device_count_to": Number,
     "user_count_from": Number,
@@ -149,7 +149,7 @@ user_count_to同理
 ```
 {
     "auth_token": "",
-    "countrycode": "",
+    "countrycode": Number,
     "device_type": Number,
     "device_id": "",
     "user": "",
