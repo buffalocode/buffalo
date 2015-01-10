@@ -124,12 +124,6 @@ response
 {
     "auth_token": "",
     "countrycode": Number,
-    "device_count_from": Number,
-    "device_count_to": Number,
-    "user_count_from": Number,
-    "user_count_to": Number,
-    "offset": Number,
-    "limit": Number
 }
 ```
 response
@@ -143,6 +137,38 @@ response
 ```
 countrycode如果不填， 则是全球的， device_count_from如果等于device_count_to, 则这2个选项无效, user_count_from,
 user_count_to同理
+
+## 设备数量和用户数量列表
+* POST /kbt/list/all_number
+
+```
+{
+    "auth_token": "",
+    "countrycode": Number,
+    "device_count_from": Number,
+    "device_count_to": Number,
+    "user_count_from": Number,
+    "user_count_to": Number,
+    "offset": Number,
+    "limit": Number
+}
+```
+response
+```
+{
+    "result": "ok" | "error",
+    "code": Number,
+    "count": Number,
+    "infos": [
+       {
+            "email": "",
+            "countrycode": Number,
+            "device_count": Number,
+            "user_count": Number
+       }
+    ]
+}
+```
 
 ## 获取设备列表
 * POST /kbt/search/devices
