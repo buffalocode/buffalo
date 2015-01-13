@@ -267,19 +267,6 @@ POST https://$ip:$port/user/deny
 </request>
 ```
 
-## 删除用户
-POST https://$ip:$port/user/del
-
-```
-<request>
-    <auth_id></auth_id>
-    <id>要删除的用户 id</id>
-</request>
-```
-
-* 现在能删除用户的只有总管理
-* 能被删除的有: "会员", "没有会员的商家"
-
 ## 数据统计
 POST https://$ip:$port/statistics
 
@@ -520,6 +507,27 @@ POST https://$ip:$port/user/del
 <request>
     <auth_id></auth_id>
     <user_id>要删除的用户的id</user_id>
+</request>
+```
+
+成功返回：
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+* 现在能删除用户的只有总管理
+* 能被删除的有: "会员", "没有会员的商家"
+
+## 设置会员在某个商家每天最大交易次数
+POST https://$ip:$port/user/set_max_trade_count_daily
+
+```
+<request>
+    <auth_id></auth_id>
+    <max_trade_count_daily>每天每个会员最大交易数</max_trade_count_daily>
 </request>
 ```
 
