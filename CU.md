@@ -539,6 +539,24 @@ POST https://$ip:$port/user/set_max_trade_count_daily
 </response>
 ```
 
+## 获取会员在某个商家每天最大交易次数
+POST https://$ip:$port/user/get_max_trade_count_daily
+```
+<request>
+    <auth_id></auth_id>
+</request>
+```
+
+成功返回：
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+
+
 ## 总管理修改商家对应业务员的信息
 POST https://$ip:$port/user/edit_company_user1
 
