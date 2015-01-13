@@ -552,6 +552,7 @@ POST https://$ip:$port/user/get_max_trade_count_daily
 ```
 <response>
     <result>ok</result>
+    <max_trade_count_daily></max_trade_count_daily>
 </response>
 ```
 
