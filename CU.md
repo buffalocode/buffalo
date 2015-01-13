@@ -480,6 +480,26 @@ https://$ip:$port/user/approve_ptm
 </response>
 ```
 
+## 删除交易
+https://$ip:$port/trade/del
+
+目前能删除的交易有： 积分提现.
+
+```
+<request>
+    <auth_id></auth_id>
+    <trade_id>交易id</trade_id>
+</request>
+```
+
+*  成功
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
 ## 删除用户
 
 POST https://$ip:$port/user/del
