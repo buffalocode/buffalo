@@ -1018,7 +1018,7 @@ POST https://$ip:$port/user/notify
 <request>
     <auth_id></auth_id>
     <from_who_id>要求发送的用户的id, 如果是某个商家，填这个商家的id</from_who_id>
-    <type>1表示所有会员， 2表示所有省代理， 3表示所有区域代理，4表示所有县市代理，5表示所有业务员, 6表示所有商家，7表示所有注册员 </type>
+    <type>用户类型，1表示省代理，依次类推 </type>
     <content>内容</content>
 </request>
 ```
