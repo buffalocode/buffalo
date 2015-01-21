@@ -13,7 +13,7 @@ post content
     "phone": "",
     "email": "",
     "password": "",
-    "user_type: 1 | 2 | 3, 1为普通用户， 2为国家管理员， 3为总管理
+    "user_type": 1 | 2 | 3, 1为普通用户， 2为国家管理员， 3为总管理
     "countrycode": Number
 }
 ```
