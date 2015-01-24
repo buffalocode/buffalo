@@ -2,6 +2,38 @@
 
 * device_type: 1) 汽车灯 2)摩托车灯 3)车载净化器
 
+## 获取country列表
+
+* POST /kbt/get/countries
+
+post content
+```
+{
+    "countrycode": Number
+}
+```
+
+response:
+```
+{
+    "result": "",
+    "infos": [
+        {"code": Number, "name": String},
+        ...
+    ]
+}
+```
+
+## 修改下级密码
+* POST /kbt/change_lower/password
+
+post content
+```
+{
+    "auth_token": String,
+    "user": String,下级用户
+}
+```
 
 ## 注册用户
 
@@ -163,6 +195,7 @@ response
        {
             "email": "",
             "countrycode": Number,
+            "country": String,
             "device_count": Number,
             "user_count": Number
        }
