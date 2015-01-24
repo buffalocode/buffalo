@@ -111,7 +111,7 @@ response
 post content
 ```
 {
-    "user": "email or phone",
+    "auth_token": "",
     "old_password": "",
     "new_password": "",
     "countrycode": Number
