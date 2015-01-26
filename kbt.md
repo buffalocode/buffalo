@@ -76,6 +76,8 @@ response
     "result": "ok" | "error",
     "code": Number,
     "desc": "",
+    "countrycode": Number,
+    "user_type": Number,
     "auth_token": "can use used in other api calling",
     "version": {
         "ios": "",
