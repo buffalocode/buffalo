@@ -31,7 +31,8 @@ post content
 ```
 {
     "auth_token": String,
-    "user": String,下级用户
+    "user": String,下级用户,
+    "password": String, 新密码
 }
 ```
 
