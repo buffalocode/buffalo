@@ -43,8 +43,7 @@ post content
 post content
 ```
 {
-    "phone": "",
-    "email": "",
+    "user": "", 邮箱或手机号
     "password": "",
     "user_type": 1 | 2 | 3, 1为普通用户， 2为国家管理员， 3为总管理
     "countrycode": Number
@@ -196,7 +195,7 @@ response
     "count": Number,
     "infos": [
        {
-            "email": "",
+            "user": "",
             "countrycode": Number,
             "country": String,
             "device_count": Number,
@@ -235,8 +234,7 @@ response
     "count": Number,
     "infos": [
         {
-            "phone": "",
-            "email": "",
+            "user": "",
             "login_times": Number,
             "device_id": "",
             "device_type": Number,
