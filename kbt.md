@@ -36,6 +36,27 @@ post content
 }
 ```
 
+## 发送验证消息
+* POST /kbt/register/user
+
+post content
+```
+{
+    "user": "",邮箱或者手机号
+    "countrycode": Number 对手机发送消息时需要
+}
+```
+
+response
+```
+{
+    "result": "ok" | "error",
+    "code": Number,
+    "desc": "",
+    "register_token": ""  # 注册时要传的token, 用来验证用户输入的消息是否正确，有效期5分钟
+}
+```
+
 ## 注册用户
 
 * POST /kbt/register/user
@@ -46,7 +67,9 @@ post content
     "user": "", 邮箱或手机号
     "password": "",
     "user_type": 1 | 2 | 3, 1为普通用户， 2为国家管理员， 3为总管理
-    "countrycode": Number
+    "countrycode": Number,
+    "register_token": "",
+    "register_text": ""用户需要输入的验证码
 }
 ```
 response
