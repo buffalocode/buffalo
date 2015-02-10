@@ -37,7 +37,7 @@ post content
 ```
 
 ## 发送验证消息
-* POST /kbt/register/user
+* POST /kbt/auth/user
 
 post content
 ```
