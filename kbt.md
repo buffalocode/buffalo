@@ -116,7 +116,7 @@ response
 post content
 ```
 {
-    "user": "email or phone",
+    "user": "user", // 注册时使用的用户名
     "countrycode": Number
 }
 ```
