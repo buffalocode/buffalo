@@ -81,6 +81,43 @@ response
 }
 ```
 
+## 查询用户是否已经被注册
+
+* POST /kbt/is_used/user 
+
+post content
+```
+{
+    "countrycode": Number,
+    "user": "", 邮箱或手机号
+}
+```
+response
+```
+{
+    "is_used": true or false
+}
+```
+
+## 验证验证信息是否正确
+
+* POST /kbt/is_correct_token/user
+
+post content
+```
+{
+    "countrycode": Number,
+    "register_token": "",
+    "register_text": ""用户需要输入的验证码
+}
+```
+response
+```
+{
+    "is_correct_token": true or false
+}
+```
+
 ## 用户登录
 
 * POST /kbt/login/user
