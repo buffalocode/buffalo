@@ -1,6 +1,16 @@
 #服务器接口
 
-* device_type: 1) 汽车灯 2)摩托车灯 3)车载净化器 4)调色板 5)蓝牙头盔 6)HUD
+* device_type:
+
+  ```
+"MWD" 摩托车尾灯
+"CDR" 汽车大灯
+"CDL" 汽车日行灯
+"RGB" 调色板
+"AIR" 空气净化器
+"BHD" 蓝牙头盔
+"HUD" HUD
+  ```
 
 ## 获取country列表
 
@@ -197,7 +207,7 @@ post content
 {
     "auth_token": "get by login",
     "device_id": "",
-    "device_type": Number,
+    "device_type": String, 
     "countrycode": Number
 }
 ```
@@ -272,7 +282,7 @@ response
 {
     "auth_token": "",
     "countrycode": Number,
-    "device_type": Number,
+    "device_type": String,
     "device_id": "",
     "user": "",
     "login_times_from": Number,
@@ -297,7 +307,7 @@ response
             "user": "",
             "login_times": Number,
             "device_id": "",
-            "device_type": Number,
+            "device_type": String,
             "device_register_datetime": ""
         }
     ]
