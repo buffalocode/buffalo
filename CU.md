@@ -640,7 +640,7 @@ POST https://$ip:$port/list/kinds
     <district_id>县区ID</district_id>
     <assoc_with_id>相关某人的ID</assoc_with_id>
     <trade_spec>
-       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 充值</type>
+       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 商家充值, 6. 会员充值</type>
        <good_trade_use_type>如果是商品交易， 可以填1（现金）， 2（积分），也可以不填，不填表示所有</good_trade_use_type>
        <is_finished>0或1， 0表示未完成， 1表示已完成</is_finished>
        <is_from>0 或 1, 是否是交易的发起方. 
@@ -1318,3 +1318,11 @@ POST https://$ip:$port/trade/recharge
 </response>
 
 ```
+
+可能的错误
+
+514: 积分不足
+528: 积分卡卡号不正确
+531: 用户已经被禁用
+1024: 密码不正确
+900: 商家积分不足
