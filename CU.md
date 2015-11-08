@@ -646,7 +646,8 @@ POST https://$ip:$port/list/kinds
        <is_from>0 或 1, 是否是交易的发起方. 
        对于商品交易，回档交易. from是user， to是company
        对于积分提现 from可能是agency1, agency2, ... user,  to是admin
-       对于充值     from是company,  to是admin
+       对于商家充值     from是company,  to是admin
+       对于会员充值 from是user, to是company
        
        如果填的是3， 并且assoc_with_id填的是商家， 则查询和该商家有关的会员消费而产生的trade信息
        如果填的是4， 则auth_id必须是商家的，assoc_with_id里面填会员的ids, 这样会查assoc_with_id里的会员在该商家消费的记录
