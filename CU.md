@@ -1297,3 +1297,24 @@ POST https://$ip:$port/trade/batch_xls
     </NewDataSet>
 </request>
 ```
+
+## 会员充值
+
+POST https://$ip:$port/trade/recharge
+
+```
+<request>
+    <auth_id></auth_id>
+    <amount>充值数额</amount>
+    <password>会员密码，如果是积分交易， 需要填写</password>
+    <card_num>积分卡卡号</card_num>
+</request>
+```
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
