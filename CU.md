@@ -706,7 +706,7 @@ trade_spec只有在type为trade时才要出现
         <recruited_at>如果查询的是user2和user, 这会显示所属的商家. 查询其它类型，则此为空<recruited_at>
         <total_point>总积分， 总共获得的积分数</total_point>
         <ptm>提现积分</pmt>
-        <recharge_money>充值金钱</recharge_money>
+        <recharge_money>充值金钱(商家和会员都有该项)</recharge_money>
         <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
         <share_point>因为积分分成得到的积分</share_point>
         <used_point>积分消费总额(会员)/送出的积分(商家)</used_point>
