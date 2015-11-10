@@ -317,7 +317,7 @@ POST https://$ip:$port/statistics
 <response>
    <income>收益点数</income>
    <outcome>支出点数</outcome>
-   <user_recharge>该账户下面商家给会员充值金额</user_recharge>
+   <user_recharge>该账户下级商家(包含商家本身)给会员充值金额</user_recharge>
 </response>
 ```
 
