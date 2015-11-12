@@ -149,7 +149,7 @@ POST https://$ip:$port/user/register
 整个系统在开始的时候会在数据库内插入一个用户，该用户为超级用户，为总管理,
 可以添加各级代理，商家，业务员
 
-POST https://$ip:$port/user/add 
+POST https://$ip:$port/user/add s
 
 ```
 <request>
@@ -318,6 +318,9 @@ POST https://$ip:$port/statistics
    <income>收益点数</income>
    <outcome>支出点数</outcome>
    <user_recharge>该账户下级商家(包含商家本身)给会员充值金额</user_recharge>
+   <trade_amount>该段时间交易总额(除总管理，其它角色该值为0)</trade_amount>
+   <points_generated>该段时间产生积分数(除总管理，其它角色该值为0)</points_generated>
+   <user_gain_points>该段时间会员获得积分数(除总管理，其它角色该值为0)</user_gain_points>
 </response>
 ```
 
