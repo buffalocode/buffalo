@@ -712,6 +712,7 @@ trade_spec只有在type为trade时才要出现
         <total_point>总积分， 总共获得的积分数</total_point>
         <ptm>提现积分</pmt>
         <recharge_money>充值金钱(商家和会员都有该项)</recharge_money>
+        <user_recharge_money>会员在该商家的充值金额</user_recharge_money>
         <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
         <share_point>因为积分分成得到的积分</share_point>
         <used_point>积分消费总额(会员)/送出的积分(商家)</used_point>
