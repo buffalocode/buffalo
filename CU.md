@@ -319,6 +319,7 @@ POST https://$ip:$port/statistics
    <outcome>支出点数</outcome>
    <user_recharge>该账户下级商家(包含商家本身)给会员充值金额</user_recharge>
    <trade_amount>该段时间交易总额(除总管理, 商家，其它角色该值为0)</trade_amount>
+   <trade_by_point>该段时间会员在该商家(或下级商家)积分消费数额</trade_by_point>
    <points_generated>该段时间产生积分数(除总管理, 商家，其它角色该值为0)</points_generated>
    <user_gain_points>该段时间会员获得积分数(除总管理, 商家，其它角色该值为0)</user_gain_points>
 </response>
