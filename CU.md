@@ -566,12 +566,12 @@ POST https://$ip:$port/user/get_max_trade_count_daily
 ## 总管理修改商家对应业务员的信息
 POST https://$ip:$port/user/edit_company_user1
 
+该API会将商家的上级业务员改为 "业务员name"(username) 对应的业务员
+
 ```
 <request>
     <auth_id></auth_id>
-    <user_id>业务员id</user_id>
     <name>业务员name</name>
-    <phone>业务员phone</phone>
 </request>
 ```
 
