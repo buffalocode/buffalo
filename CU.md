@@ -145,6 +145,33 @@ POST https://$ip:$port/user/register
 * 517: email已经被占用
 * 544: challenge_by_text不正确
 
+## 忘记密码
+
+针对会员
+
+POST https://$ip:$port/user/forgot_password
+
+```
+<request>
+    <user>
+        <phone></phone>
+        <password>英文，密码</password>
+        <challenge_code_handler>notify/send_text_challenge接口返回里面的内容</challenge_code_handler>
+        <challenge_code>发送到手机的验证码</challenge_code>
+    </user>
+</request>
+```
+
+* 成功，返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+
 ## 用户加盟成商家
 整个系统在开始的时候会在数据库内插入一个用户，该用户为超级用户，为总管理,
 可以添加各级代理，商家，业务员
