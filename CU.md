@@ -1292,6 +1292,7 @@ POST https://$ip:$port/notify/send_text_challenge
 成功返回
 ```
 <response>
+    <result>ok</result>
     <challenge_code_handler>注册，忘记密码等接口提交时需要</challenge_code_handler>
     <challenge_code>用户需要输入的challenge_code</challenge_code>
     <expire_time>几秒后过期</expire_time>
