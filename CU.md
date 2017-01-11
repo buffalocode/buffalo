@@ -124,7 +124,8 @@ POST https://$ip:$port/user/register
         <auth_pic_id>验证图片ID</auth_pic_id>
         <challenge_code_handler>notify/send_text_challenge接口返回里面的内容, 手机验证时需要</challenge_code_handler>
         <challenge_code>发送到手机的验证码, 手机验证时需要</challenge_code>
-    </user>
+        <company_id>商家id, 注册会员的时候需要, 其它时候不需要</company_id>
+    </user>
 </request>
 ```
 
@@ -146,6 +147,7 @@ POST https://$ip:$port/user/register
 * 516: email不符合规范
 * 517: email已经被占用
 * 544: challenge_by_text不正确
+* 2300: 找不到对应的商家
 
 ## 忘记密码
 
