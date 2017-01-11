@@ -178,8 +178,7 @@ POST https://$ip:$port/user/forgot_password
 可能的错误码
 
 * 2111: phone指的用户找不到
-* 
-: 密码强度不够, 必须包含至少一个大写字母，一个数字, 一个小写字母, 长度至少为8
+* 509: 密码必须为6位数字
 * 515: 验证码不正确
 * 544: challenge_by_text不正确
 
