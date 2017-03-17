@@ -1025,7 +1025,7 @@ POST https://$ip:$port/user/login
     <server_ver_for_android>api对于android的版本号, 例如1.0.0</server_ver_for_android>
     <server_ver_for_ios>api对于ios的版本号， 例如1.0.0</server_ver_for_ios>
     <server_ver>api对于pc客户端的版本号， 例如1.0.0</server_ver>
-    <belong_to></belong_to>
+    <belong_to>所属商家</belong_to>
  </item>
 </response>
 ```
