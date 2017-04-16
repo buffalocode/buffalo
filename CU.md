@@ -1374,3 +1374,25 @@ POST https://$ip:$port/trade/recharge
 * 531: 用户已经被禁用
 * 1024: 密码不正确
 * 900: 商家积分不足
+
+## 绑定JPUSH RegistrationID
+POST https://$ip:$port/user/add_jpush_id
+
+```
+<request>
+    <auth_id></auth_id>
+    <jpush_id></jpush_id>  # 则是 JPush 提供的另外一套 RegistrationID 机制
+    <platform>1</platform> # 1表示android, 2表示ios
+</request>
+```
+
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
