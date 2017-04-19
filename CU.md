@@ -1475,3 +1475,11 @@ POST https://$ip:$port/activity/change
     <desc>描述</desc> # 如果action是5时，可以让总管理修改这个字段
 </request>
 ```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
