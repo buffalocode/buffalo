@@ -1396,3 +1396,82 @@ POST https://$ip:$port/user/add_jpush_id
 
 ```
 
+## 商家申请活动报名
+POST https://$ip:$port/activity/apply
+
+```
+<request>
+    <auth_id></auth_id>
+    <large_than></large_than> #会员消费满足>某个金额时
+    <point></point> #赠送积分
+    <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+    <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
+    <title>标题</title>
+    <desc>描述</desc>
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+## 获取当前提交的活动申请
+POST https://$ip:$port/activity/get
+总管理和商家2个角色可以获取
+
+```
+<request>
+    <auth_id></auth_id>
+    <state></state> # 0: 全部, 1: 申请中， 2: 用户取消, 3: 总管理拒绝, 4: 已过期. 5: 总管理同意
+    <user></user> # 如果是总管理获取，则可按商家名user进行搜索
+    <offset>起始offset, 分页使用</offset>
+    <limit>limit, 每页个数</limit>
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+    <count>个数</count>
+    <activities>
+        <activity>
+            <id>活动id</id>
+            <user_id>用户id</user_id>
+            <user>用户名</user>
+            <company>公司名</company>
+            <state></state>
+            <large_than></large_than> #会员消费满足>某个金额时
+            <point></point> #赠送积分
+            <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+            <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
+            <title>标题</title>
+            <desc>描述</desc>
+        </activity>
+    </activities>
+</response>
+```
+
+## 对活动进行操作
+POST https://$ip:$port/activity/change
+总管理和商家2个角色可以操作
+
+```
+<request>
+    <auth_id></auth_id>
+    <id></id> #活动id
+    <action></action> # 2： 用户取消, 3：总管理拒绝, 5：总管理同意
+    <large_than></large_than> #会员消费满足>某个金额时， 如果action是5时，可以让总管理修改这个字段
+    <point></point> #赠送积分, 如果action是5时，可以让总管理修改这个字段
+    <start_time>起始时间 (2014-02-12 00:00:00)</start_time> #如果action是5时，可以让总管理修改这个字段
+    <end_time>起始时间 (2014-02-12 00:00:00)</end_time> #如果action是5时，可以让总管理修改这个字段
+    <title>标题</title> #如果action是5时，可以让总管理修改这个字段
+    <desc>描述</desc> # 如果action是5时，可以让总管理修改这个字段
+</request>
+```
