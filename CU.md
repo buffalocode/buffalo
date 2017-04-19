@@ -1460,7 +1460,7 @@ POST https://$ip:$port/activity/get
 
 ## 对活动进行操作
 POST https://$ip:$port/activity/change
-总管理和商家2个角色可以操作
+总管理和商家2个角色可以操作, 如果是总管理进行操作，会发送短信给商家
 
 ```
 <request>
