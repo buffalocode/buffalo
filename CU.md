@@ -1021,6 +1021,7 @@ POST https://$ip:$port/user/login
     <recharge_money>充值金钱</recharge_money>
     <good_trade_point>会员使用积分进行交易时商家直接获得的积分</good_trade_point>
     <share_point>因为积分分成得到的积分</share_point>
+    <activity_point>做活动获得或送出的积分(用户，总管理，商家有效)</activity_point>
     <used_point>积分消费总额(会员)/送出的积分(商家)</used_point>
     <member_count>会员个数</member_count>
     <server_ver_for_android>api对于android的版本号, 例如1.0.0</server_ver_for_android>
