@@ -691,9 +691,10 @@ POST https://$ip:$port/list/kinds
        对于积分提现 from可能是agency1, agency2, ... user,  to是admin
        对于商家充值     from是company,  to是admin
        对于会员充值 from是user, to是company
-       
-       如果填的是3， 并且assoc_with_id填的是商家， 则查询和该商家有关的会员消费而产生的trade信息
-       如果填的是4， 则auth_id必须是商家的，assoc_with_id里面填会员的ids, 这样会查assoc_with_id里的会员在该商家消费的记录
+       对于活动积分 from是user, to是company
+       
+       如果填的是3， 并且assoc_with_id填的是商家， 则查询和该商家有关的会员消费而产生的trade信息, 或者是该商家办活动产生的积分
+       如果填的是4， 则auth_id必须是商家的，assoc_with_id里面填会员的ids, 这样会查assoc_with_id里的会员在该商家消费的记录
        </is_from>
     </trade_spec>
     <offset>分页offset</offset>
@@ -787,7 +788,7 @@ trade_spec只有在type为trade时才要出现
         <produce_type>产生的类型： 1现金，2积分</produce_type>
         <producted>产生积分或金钱</producted>
         <time>交易时间</time>
-        <trade_type>交易类型, 1. 商品交易 3，回档交易, 4. 积分提现, 5. 充值</trade_type>
+        <trade_type>交易类型, 1. 商品交易 3，回档交易, 4. 积分提现,  5. 商家充值, 6. 会员充值, 7. 活动积分</trade_type>
         <is_finished>0或1</is_finished>
         //积分提现， 充值时需要
         <bank_card_id>银行卡卡号</bank_card_id>
