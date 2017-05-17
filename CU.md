@@ -183,7 +183,7 @@ POST https://$ip:$port/user/forgot_password
 * 544: challenge_by_text不正确
 
 
-## 用户加盟成商家
+## 用户加盟
 整个系统在开始的时候会在数据库内插入一个用户，该用户为超级用户，为总管理,
 可以添加各级代理，商家，业务员
 
@@ -683,7 +683,7 @@ POST https://$ip:$port/list/kinds
     <district_id>县区ID</district_id>
     <assoc_with_id>相关某人的ID</assoc_with_id>
     <trade_spec>
-       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 商家充值, 6. 会员充值, 7. 活动积分</type>
+       <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 商家充值, 6. 会员充值, 7. 活动积分, 8. 导流消费券积分</type>
        <good_trade_use_type>如果是商品交易， 可以填1（现金）， 2（积分），也可以不填，不填表示所有</good_trade_use_type>
        <is_finished>0或1， 0表示未完成， 1表示已完成</is_finished>
        <is_from>0 或 1, 是否是交易的发起方. 
@@ -692,6 +692,7 @@ POST https://$ip:$port/list/kinds
        对于商家充值     from是company,  to是admin
        对于会员充值 from是user, to是company
        对于活动积分 from是user, to是company
+       对于导流消费券 from是company(付出积分的公司), to是company(收入积分的公司)
        
        如果填的是3， 并且assoc_with_id填的是商家， 则查询和该商家有关的会员消费而产生的trade信息
        如果填的是4， 则auth_id必须是商家的，assoc_with_id里面填会员的ids, 这样会查assoc_with_id里的会员在该商家消费的记录
@@ -1028,6 +1029,7 @@ POST https://$ip:$port/user/login
     <server_ver_for_ios>api对于ios的版本号， 例如1.0.0</server_ver_for_ios>
     <server_ver>api对于pc客户端的版本号， 例如1.0.0</server_ver>
     <belong_to>所属商家</belong_to>
+    <pool_point>导流活动积分池积分</pool_point>
  </item>
 </response>
 ```
@@ -1475,6 +1477,125 @@ POST https://$ip:$port/activity/change
     <end_time>起始时间 (2014-02-12 00:00:00)</end_time> #如果action是5时，可以让总管理修改这个字段
     <title>标题</title> #如果action是5时，可以让总管理修改这个字段
     <desc>描述</desc> # 如果action是5时，可以让总管理修改这个字段
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+
+## 商家往积分池充积分或者提取积分
+
+POST https://$ip:$port/promotion/pool/change
+
+```
+<request>
+    <auth_id></auth_id>
+    <point></point> # 充值或提取的积分数额
+    <action></action> 1或者2， 1为充值， 2为提取
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+可能的错误码
+* 910: 用户积分不足
+* 911: 积分池积分不足，无法提取
+
+
+## 商家申请导流积分券活动
+
+POST https://$ip:$port/promotion/apply
+
+```
+<request>
+    <auth_id></auth_id>
+    <point></point> #赠送积分券的积分
+    <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+    <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
+    <title>标题</title>
+    <desc>描述</desc>
+</request>
+```
+
+成功返回
+
+ ```
+<response>
+    <result>ok</result>
+</response>
+
+```
+
+可能的错误码
+
+* 900: 积分池积分不足
+* 901: 已经有正在进行或者待批准的导流活动
+
+## 获取导流列表
+
+POST https://$ip:$port/promotion/get 总管理和商家2个角色可以获取
+
+```
+<request>
+    <auth_id></auth_id>
+    <state></state> # 0: 全部, 1: 申请中， 2: 用户取消, 3: 总管理拒绝, 4: 已过期. 5: 总管理同意
+    <user></user> # 如果是总管理获取，则可按商家名user进行搜索
+    <offset>起始offset, 分页使用</offset>
+    <limit>limit, 每页个数</limit>
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+    <count>个数</count>
+    <items>
+        <item>
+            <id>活动id</id>
+            <user_id>用户id</user_id>
+            <user>用户名</user>
+            <company>公司名</company>
+            <pool_point></pool_point> #积分池积分
+            <state></state>
+            <point></point> #赠送积分券的积分
+            <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+            <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
+            <title>标题</title>
+            <desc>描述</desc>
+        </item>
+    </item>
+</response>
+```
+
+## 对导流申请进行操作
+
+POST https://$ip:$port/promotion/change 总管理和商家2个角色可以获取
+
+```
+<request>
+    <auth_id></auth_id>
+    <id></id> #活动id
+    <action></action> # 2： 用户取消, 3：总管理拒绝, 5：总管理同意
+    <multiple></multiple> 倍数， action是5的时候需要填写
+    <start_time>起始时间 (2014-02-12 00:00:00)</start_time> #如果action是5时，可以让总管理修改这个字段
+    <end_time>起始时间 (2014-02-12 00:00:00)</end_time> #如果action是5时，可以让总管理修改这个字段
+    <title>标题</title> #如果action是5时，可以让总管理修改这个字段
+    <desc>描述</desc> # 如果action是5时，可以让总管理修改这个字段
 </request>
 ```
 
