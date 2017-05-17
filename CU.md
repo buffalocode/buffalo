@@ -1606,3 +1606,37 @@ POST https://$ip:$port/promotion/change 总管理和商家2个角色可以获取
     <result>ok</result>
 </response>
 ```
+
+## 用户获取当前的积分券
+
+POST https://$ip:$port/promotion/tickets 仅用户可以获取
+
+```
+<request>
+    <auth_id></auth_id>
+    <state></state> # 0: 全部, 1: 已使用， 2: 未使用， 3: 已过期
+    <offset>起始offset, 分页使用</offset>
+    <limit>limit, 每页个数</limit>
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+    <count>个数</count>
+    <items>
+        <item>
+            <id>活动券id</id>
+            <user_id>用户id</user_id>
+            <user>用户名</user>
+            <company>公司名</company>
+            <state></state>
+            <point></point> #赠送积分券的积分
+            <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+            <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
+        </item>
+    </item>
+</response>
+```
