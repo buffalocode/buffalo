@@ -1523,8 +1523,6 @@ POST https://$ip:$port/promotion/apply
 <request>
     <auth_id></auth_id>
     <point></point> #赠送积分券的积分
-    <compnay_point></company_point> #商家（用户在该商家消费，获得积分券）获得的积分
-    <admin_point></admin_point> #总管理获得的积分
     <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
     <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
     <title>标题</title>
@@ -1595,7 +1593,9 @@ POST https://$ip:$port/promotion/change 总管理和商家2个角色可以获取
     <auth_id></auth_id>
     <id></id> #活动id
     <action></action> # 2： 用户取消, 3：总管理拒绝, 5：总管理同意
-    <multiple></multiple> 倍数， action是5的时候需要填写
+    <compnay_point></company_point> #商家（用户在该商家消费，获得积分券）获得的积分, action是5的时候需要填写
+    <admin_point></admin_point> #总管理获得的积分, action是5的时候需要填写
+    <multiple></multiple> 倍数， action是5的时候需要填写
     <start_time>起始时间 (2014-02-12 00:00:00)</start_time> #如果action是5时，可以让总管理修改这个字段
     <end_time>起始时间 (2014-02-12 00:00:00)</end_time> #如果action是5时，可以让总管理修改这个字段
     <title>标题</title> #如果action是5时，可以让总管理修改这个字段
