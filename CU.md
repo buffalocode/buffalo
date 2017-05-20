@@ -1523,7 +1523,9 @@ POST https://$ip:$port/promotion/apply
 <request>
     <auth_id></auth_id>
     <point></point> #赠送积分券的积分
-    <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+    <compnay_point></company_point> #商家（用户在该商家消费，获得积分券）获得的积分
+    <admin_point></admin_point> #总管理获得的积分
+    <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
     <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
     <title>标题</title>
     <desc>描述</desc>
@@ -1573,6 +1575,8 @@ POST https://$ip:$port/promotion/get 总管理和商家2个角色可以获取
             <pool_point></pool_point> #积分池积分
             <state></state>
             <point></point> #赠送积分券的积分
+            <compnay_point></company_point> #商家（用户在该商家消费，获得积分券）获得的积分
+            <admin_point></admin_point> #总管理获得的积分
             <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
             <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
             <title>标题</title>
