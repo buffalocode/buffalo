@@ -1637,6 +1637,7 @@ POST https://$ip:$port/promotion/tickets 仅用户可以获取
     <items>
         <item>
             <id>活动券id</id>
+            <promotion_id>对应优惠活动id</promotion_id>
             <user_id>用户id</user_id>
             <user>用户名</user>
             <company>公司名</company>
