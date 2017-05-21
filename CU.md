@@ -1506,6 +1506,7 @@ POST https://$ip:$port/promotion/pool/change
  ```
 <response>
     <result>ok</result>
+    <pool_point>变更后积分池积分</pool_point>
 </response>
 
 ```
