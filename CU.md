@@ -1643,7 +1643,8 @@ POST https://$ip:$port/promotion/tickets 仅用户可以获取
             <company>公司名</company>
             <state></state>
             <point></point> #赠送积分券的积分
-            <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
+            <expired_by_pool_point>0|1</expired_by_pool_point>#因为积分池用光而过期
+            <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
             <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
         </item>
     </item>
