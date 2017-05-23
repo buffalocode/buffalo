@@ -824,6 +824,7 @@ trade_spec只有在type为trade时才要出现
         <to_company></to_company> #收入积分公司名称
         <company_incoming></company_incoming> #收入积分公司，收入的积分
         <platform_incoming></platform_incoming> #平台收入积分
+        <user_incoming></user_incoming> #用户收入，即优惠券面额
      </item>
    </items>
 </response>
