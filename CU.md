@@ -1668,7 +1668,7 @@ POST https://$ip:$port/promotion/tickets 仅用户可以获取
             <expired_by_pool_point>0|1</expired_by_pool_point>#因为积分池用光而过期
             <start_time>起始时间 (2014-02-12 00:00:00)</start_time>
             <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
-            <use_time>起始时间 (2014-02-12 00:00:00)</use_time> #积分券使用时间，当state = 1的时候值才有意义
+            <use_time>(2014-02-12 00:00:00)</use_time> #积分券使用时间，当state = 1的时候值才有意义
         </item>
     </item>
 </response>
