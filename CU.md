@@ -808,6 +808,27 @@ trade_spec只有在type为trade时才要出现
 </response>
 ```
 
+如果查询的是trade, 并且trade_spec/type 是8， 也就是导流活动，返回是
+```
+<response>
+   <count>个数</count>
+   <items>
+     <item>
+        <id></id>
+        <coupon_id>积分券id</coupon_id>
+        <card_num></card_num> #会员卡卡号
+        <time></time> #产生时间
+        <from></from> #from是company(付出积分的公司)
+        <from_company></from_company> #付出积分公司名称
+        <to></to> #to是company(收入积分的公司)
+        <to_company></to_company> #收入积分公司名称
+        <company_incoming></company_incoming> #收入积分公司，收入的积分
+        <platform_incoming></platform_incoming> #平台收入积分
+     </item>
+   </items>
+</response>
+```
+
 可能的错误码
 
 * 525: 找不到该用户
