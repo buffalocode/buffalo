@@ -1674,3 +1674,175 @@ POST https://$ip:$port/promotion/tickets 仅用户可以获取
     </item>
 </response>
 ```
+
+## 添加商圈
+
+POST https://$ip:$port/business_district/add
+
+仅总管理可以添加
+
+```
+<request>
+    <auth_id></auth_id>
+    <name>商圈名</name> #商圈名不能重复
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+## 修改商圈
+
+POST https://$ip:$port/business_district/edit
+
+仅总管理可以修改
+
+```
+<request>
+    <auth_id></auth_id>
+    <id>商圈id</id>
+    <name>商圈名</name> #商圈名不能重复
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+## 获取商圈
+
+POST https://$ip:$port/business_district/find
+
+```
+<request>
+    <auth_id></auth_id>
+    <name>商圈名</name> #如果填了，那么就按商圈名进行搜索
+    <statistic>0 | 1<statistic> #是否输出统计信息
+    <start_time>起始时间 (2014-02-12 00:00:00)</start_time> #当statistic = 1的时候，可以填写
+    <end_time>起始时间 (2014-02-12 00:00:00)</end_time>
+    <offset>起始offset, 分页使用</offset>
+    <limit>limit, 每页个数</limit>
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+    <count>个数</count>
+    <items>
+        <item>
+            <id></id>
+            <name></name>
+            <statistic>
+                <leader>
+                    <member_count>会员数量</member_count>
+                    <member_add_today>会员的新增量</member_add_today>
+                    <point_used_average>单次积分的使用量（积分使用平均量）</point_used_average>
+                    <point_used_count>积分使用次数（积分使用次数）</point_used_count>
+                    <trade_count>交易笔数</trade_count>
+                    <dup_trade_count>重复消费的次数（同一个账号，消费2次以上算重复次数）</dup_trade_count>
+                </leader>
+                <others> #该商区除领头商家的其它商家的统计
+                    <point_used_average>使用积分的平均数</point_used_average>
+                    <point_used_count>使用积分的次数</point_used_count>
+                    <dup_trade_count>二次购买的人数汇总</dup_trade_count>
+                    <trade_user_count>所在商圈内的会员的使用次数（有参加交易的会员的人数）</trade_user_count>
+                    <user_points_left>所在商圈会员积分余额汇总</user_points_left>
+                </others>
+            </statistic>
+        </item>
+    </items>
+</response>
+```
+
+## 为某个商家关联商圈
+
+POST https://$ip:$port/user/assoc/business_district
+
+```
+<request>
+    <auth_id></auth_id>
+    <user_id></user_id> #商家id
+    <bd_id></bd_id> #商圈id
+    <is_leader></is_leader> # 是否是领头商家， 0或1, 1表示是
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+## 商家上传经纬度
+
+POST https://$ip:$port/user/upload_pos
+
+```
+<request>
+    <auth_id></auth_id>
+    <lng></lng> #经度
+    <lat></lat> #纬度
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+</response>
+```
+
+## 用户搜索附近商家
+
+POST https://$ip:$port/user/near_by/company
+
+```
+<request>
+    <auth_id></auth_id>
+    <lng></lng> #经度
+    <lat></lat> #纬度
+    <distance></distance> # 搜索范围，单位为公里
+</request>
+```
+
+成功返回
+
+```
+<response>
+    <result>ok</result>
+    <count>个数</count>
+    <items>
+        <item>
+            <id></id>
+            <tel>固定电话(数字, +, 中划线)</tel>
+            <phone>手机</phone>
+            <address>用户的详细地址</address>
+            <province>省名称</province>
+            <city>市名称</city>
+            <district>县名称</district_id>
+            <company>公司名</company>
+            <post_code>邮编</post_code>
+            <catelog>所属分类</catelog>
+            <real_name>是否实名</real_name>
+            <real_company>是否实名公司</real_company>
+            <lng></lng> #经度
+            <lat></lat> #纬度
+        </item>
+    </items>
+</response>
+```
