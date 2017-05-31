@@ -1819,6 +1819,8 @@ POST https://$ip:$port/user/near_by/company
     <lng></lng> #经度
     <lat></lat> #纬度
     <distance></distance> # 搜索范围，单位为公里
+    <offset></offset>#从第几个开始输出
+    <limit></limit>#输出几个
 </request>
 ```
 
