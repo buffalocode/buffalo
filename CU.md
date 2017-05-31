@@ -749,6 +749,11 @@ trade_spec只有在type为trade时才要出现
         <enabled>是否已启用</enabled>
         <real_name>是否实名</real_name>
         <real_company>是否实名公司</real_company>
+        <is_leader>是否是商圈领头商家, 1表示是，0表示不是</is_leader>
+        <bd_id>商圈id</bd_id>
+        <bd_name>商圈名</bd_name>
+        <lng>经度</lng>
+        <lat>纬度</lat>
         <recruited_at>如果查询的是user2和user, 这会显示所属的商家. 查询其它类型，则此为空<recruited_at>
         <total_point>总积分， 总共获得的积分数</total_point>
         <ptm>提现积分</pmt>
