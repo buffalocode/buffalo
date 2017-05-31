@@ -1776,7 +1776,7 @@ POST https://$ip:$port/user/assoc/business_district
 <request>
     <auth_id></auth_id>
     <user_id></user_id> #商家id
-    <bd_id></bd_id> #商圈id
+    <bd_name></bd_name> #商圈id
     <is_leader></is_leader> # 是否是领头商家， 0或1, 1表示是
 </request>
 ```
