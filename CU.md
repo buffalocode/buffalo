@@ -1838,6 +1838,7 @@ POST https://$ip:$port/user/near_by/company
             <address>用户的详细地址</address>
             <province>省名称</province>
             <city>市名称</city>
+            <distance>距离</distance>
             <district>县名称</district_id>
             <company>公司名</company>
             <post_code>邮编</post_code>
