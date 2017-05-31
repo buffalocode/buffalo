@@ -674,15 +674,15 @@ POST https://$ip:$port/list/kinds
 <request>
     <auth_id></auth_id>
     <type>统计类型: user, company, agency1, agency2, agency3, user1, user2, trade</type>  user为会员， comany为商家,  agency1为省代理，
-                    agency2为地区代理，agency3为县代理, user1为业务员， user2为注册员, trade为交易
-                    
-    <date_from>起始时间 (2014-02-12 00:00:00)</date_from>
+                    agency2为地区代理，agency3为县代理, user1为业务员， user2为注册员, trade为交易, bd_company为商圈商家
+                    
+    <date_from>起始时间 (2014-02-12 00:00:00)</date_from>
     <date_to>起始时间 (2014-02-12 00:00:00)</date_to>
     <province_id>省ID</province_id>
     <city_id>市ID</city_id>
     <district_id>县区ID</district_id>
-    <assoc_with_id>相关某人的ID</assoc_with_id>
-    <trade_spec>
+    <assoc_with_id>相关某人的ID</assoc_with_id> #如果是bd_company，这个地方填商圈id
+    <trade_spec>
        <type>1. 商品交易， 3，回档交易, 4. 积分提现, 5. 商家充值, 6. 会员充值, 7. 活动积分, 8. 导流消费券积分</type>
        <good_trade_use_type>如果是商品交易， 可以填1（现金）， 2（积分），也可以不填，不填表示所有</good_trade_use_type>
        <is_finished>0或1， 0表示未完成， 1表示已完成</is_finished>
