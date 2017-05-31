@@ -1757,9 +1757,11 @@ POST https://$ip:$port/business_district/find
                     <point_used_average>使用积分的平均数</point_used_average>
                     <point_used_count>使用积分的次数</point_used_count>
                     <dup_trade_count>二次购买的人数汇总</dup_trade_count>
+                </others>
+                <all> #该商圈所有商家统计
                     <trade_user_count>所在商圈内的会员的使用次数（有参加交易的会员的人数）</trade_user_count>
                     <user_points_left>所在商圈会员积分余额汇总</user_points_left>
-                </others>
+                </all>
             </statistic>
         </item>
     </items>
