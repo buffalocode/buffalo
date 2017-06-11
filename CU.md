@@ -1714,6 +1714,8 @@ POST https://$ip:$port/business_district/edit
     <auth_id></auth_id>
     <id>商圈id</id>
     <name>商圈名</name> #商圈名不能重复
+    <notify_by_app>0|1</notify_by_app> #是否通过APP通知
+    <notify_by_sms>0|1</notify_by_sms> #是否通过短信通知
 </request>
 ```
 
