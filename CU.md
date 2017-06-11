@@ -1753,6 +1753,8 @@ POST https://$ip:$port/business_district/find
         <item>
             <id></id>
             <name></name>
+            <notify_by_app>0|1</notify_by_app>
+            <notify_by_sms>0|1</notify_by_sms>
             <leader_member_count>会员数量</leader_member_count>  #statistic为1时才有
             <leader_member_add_today>会员的新增量</leader_member_add_today> #statistic为1时才有
             <leader_point_used_average>单次积分的使用量（积分使用平均量）</leader_point_used_average> #statistic为1时才有
