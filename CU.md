@@ -1058,6 +1058,8 @@ POST https://$ip:$port/user/login
     <server_ver>api对于pc客户端的版本号， 例如1.0.0</server_ver>
     <belong_to>所属商家</belong_to>
     <pool_point>导流活动积分池积分</pool_point>
+    <lng>经度</lng>
+    <lat>纬度</lat>
  </item>
 </response>
 ```
