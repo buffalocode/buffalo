@@ -1753,25 +1753,17 @@ POST https://$ip:$port/business_district/find
         <item>
             <id></id>
             <name></name>
-            <statistic>
-                <leader>
-                    <member_count>会员数量</member_count>
-                    <member_add_today>会员的新增量</member_add_today>
-                    <point_used_average>单次积分的使用量（积分使用平均量）</point_used_average>
-                    <point_used_count>积分使用次数（积分使用次数）</point_used_count>
-                    <trade_count>交易笔数</trade_count>
-                    <dup_trade_count>重复消费的次数（同一个账号，消费2次以上算重复次数）</dup_trade_count>
-                </leader>
-                <others> #该商区除领头商家的其它商家的统计
-                    <point_used_average>使用积分的平均数</point_used_average>
-                    <point_used_count>使用积分的次数</point_used_count>
-                    <dup_trade_count>二次购买的人数汇总</dup_trade_count>
-                </others>
-                <all> #该商圈所有商家统计
-                    <trade_user_count>所在商圈内的会员的使用次数（有参加交易的会员的人数）</trade_user_count>
-                    <user_points_left>所在商圈会员积分余额汇总</user_points_left>
-                </all>
-            </statistic>
+            <leader_member_count>会员数量</leader_member_count>  #statistic为1时才有
+            <leader_member_add_today>会员的新增量</leader_member_add_today> #statistic为1时才有
+            <leader_point_used_average>单次积分的使用量（积分使用平均量）</leader_point_used_average> #statistic为1时才有
+            <leader_point_used_count>积分使用次数（积分使用次数）</leader_point_used_count> #statistic为1时才有
+            <leader_trade_count>交易笔数</leader_trade_count> #statistic为1时才有
+            <leader_dup_trade_count>重复消费的次数（同一个账号，消费2次以上算重复次数）</leader_dup_trade_count> #statistic为1时才有
+            <others_point_used_average>使用积分的平均数</others_point_used_average> #statistic为1时才有
+            <others_point_used_count>使用积分的次数</others_point_used_count> #statistic为1时才有
+            <others_dup_trade_count>二次购买的人数汇总</others_dup_trade_count> #statistic为1时才有
+            <all_trade_user_count>所在商圈内的会员的使用次数（有参加交易的会员的人数）</all_trade_user_count> #statistic为1时才有
+            <all_user_points_left>所在商圈会员积分余额汇总</all_user_points_left> #statistic为1时才有
         </item>
     </items>
 </response>
