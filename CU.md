@@ -905,6 +905,11 @@ kind为组合， 如果输入name|tel 则会搜索name和tel2个选项， 如果
         <user1_id>当user_type为5时输出，业务员的id</user1_id>
         <user1_name>当user_type为5时输出，业务员的name</user1_name>
         <user1_phone>当user_type为5时输出，业务员的phone</user1_phone>
+        <is_leader>是否是商圈领头商家, 1表示是，0表示不是</is_leader>
+        <bd_id>商圈id</bd_id>
+        <bd_name>商圈名</bd_name>
+        <lng>经度</lng>
+        <lat>纬度</lat>
      </item>
    </items>
 </response>
