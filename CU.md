@@ -1065,6 +1065,7 @@ POST https://$ip:$port/user/login
     <pool_point>导流活动积分池积分</pool_point>
     <lng>经度</lng>
     <lat>纬度</lat>
+    <is_leader>0|1，是否是领头商家</is_leader>
  </item>
 </response>
 ```
